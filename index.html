@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dfe3e7">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 018.">
+<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 019.">
 <title>Emily Game · Grapple Prototype 017</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2716%27%20fill%3D%27%2317192c%27%2F%3E%3Crect%20x%3D%2719%27%20y%3D%2732%27%20width%3D%2726%27%20height%3D%2727%27%20rx%3D%278%27%20fill%3D%27%23d8a747%27%2F%3E%3Cpath%20d%3D%27M32%2041L39%2046%2032%2055%2025%2046Z%27%20fill%3D%27%2366cfff%27%2F%3E%3Crect%20x%3D%2710%27%20y%3D%276%27%20width%3D%2744%27%20height%3D%2732%27%20rx%3D%2712%27%20fill%3D%27%23eaba4c%27%2F%3E%3Crect%20x%3D%2717%27%20y%3D%2715%27%20width%3D%2730%27%20height%3D%2716%27%20rx%3D%276%27%20fill%3D%27%23fff0c9%27%2F%3E%3Ccircle%20cx%3D%2725%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3Ccircle%20cx%3D%2739%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3C%2Fsvg%3E">
 <style>:root{color-scheme:dark;--ink:#101121;--gold:#efc464;--pale:#fff1c9;--muted:#a7a4b3;--blue:#8dd9ff;--border:rgba(237,194,100,.24)}
@@ -212,6 +212,8 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 #home .home-menu-slot{width:100%;min-width:0;min-height:0;display:grid;
  justify-items:center;align-items:start;align-self:center}
 #home .home-menu-slot .home-copy{align-self:start;transform:translateX(var(--menu-offset-x,0px))}
+
+.start-point-button{width:100%;min-height:38px;margin-top:10px;border:1px solid #8f9aa450;border-radius:9px;background:linear-gradient(180deg,#d8dde2 0%,#bcc4cc 50%,#d2d8de 100%);color:#49545e;font-size:10px;font-weight:700;letter-spacing:1.4px;box-shadow:inset 0 1px 0 #fafdff,0 2px 0 #88919a55;transition:filter .15s,color .15s,border-color .15s}.start-point-button:hover{filter:brightness(1.03);color:#2e3942;border-color:#b0bac350}.start-point-button:active{transform:translateY(2px);box-shadow:inset 0 1px 0 #fafdff,0 1px 0 #88919a55}@media(max-width:720px) and (orientation:portrait){.start-point-button{min-height:36px;font-size:9px;margin-top:8px}}@media(max-height:520px) and (orientation:landscape){.start-point-button{min-height:31px;font-size:8px;margin-top:7px}}
 </style>
 </head>
 <body>
@@ -224,13 +226,14 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 </header>
  <div class="home-inner">
   <div class="hero-wrap"><canvas id="hero" width="700" height="680" aria-label="Rook, a tiny gold golem with a sapphire core and big golden hands"></canvas></div>
-  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>018</span></div>
+  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>019</span></div>
    <button id="play" class="primary-button" type="button" aria-label="Start"><span class="start-label">START</span></button>
+   <button id="startPoint" class="start-point-button hidden" type="button" aria-label="Choose starting shrine">START FROM · BEGINNING</button>
    <p class="control-caption"><b>Hold a ring</b> to grapple. <b>Release</b> to swing.</p>
    <div class="stats-strip"><div><small>PERSONAL BEST</small><strong id="homeBest">0 <em>m</em></strong></div><span class="stat-divider"></span><div><small>TREASURE BANK</small><strong><span class="tiny-coin" aria-hidden="true">✦</span> <span id="homeGold">0</span></strong></div></div>
   </div></div>
  </div>
- <footer class="home-footer"><span class="route-note"><span class="route-stop"><canvas class="route-sapphire gem-icon" data-gem="sapphire" width="64" height="64" aria-hidden="true"></canvas>SAPPHIRE · 10,000 m</span><i class="route-separator" aria-hidden="true"></i><span class="route-stop"><canvas class="route-ruby gem-icon" data-gem="ruby" width="64" height="64" aria-hidden="true"></canvas>RUBY · 20,000 m</span></span><span class="build-note">NO ADS OR PURCHASES</span></footer>
+ <footer class="home-footer"><span class="route-note"><span class="route-stop"><canvas class="route-sapphire gem-icon" data-gem="sapphire" width="64" height="64" aria-hidden="true"></canvas>SAPPHIRE · 10,000 m</span><i class="route-separator" aria-hidden="true"></i><span class="route-stop"><canvas class="route-ruby gem-icon" data-gem="ruby" width="64" height="64" aria-hidden="true"></canvas>RUBY · 20,000 m</span><i class="route-separator" aria-hidden="true"></i><span class="route-stop"><canvas class="route-emerald gem-icon" data-gem="emerald" width="64" height="64" aria-hidden="true"></canvas>EMERALD · 30,000 m</span></span><span class="build-note">NO ADS OR PURCHASES</span></footer>
 </main>
 <section id="hud" class="hidden" aria-label="Run status">
  <div class="hud-left"><div class="hud-metric"><small>DISTANCE</small><strong><span id="distance">0</span><em> m</em></strong></div><div class="hud-metric gold-metric"><small>THIS RUN</small><strong><span class="tiny-coin">✦</span> <span id="runGold">0</span></strong><span class="combo-badge" id="comboBadge" aria-label="1 times treasure"><span id="comboValue">×1</span></span></div></div>
@@ -243,14 +246,14 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 <div id="readyHint" class="ready-hint hidden"><span class="hold-symbol">◉</span><h2 id="readyTitle">Your first swing.</h2><p id="readyText">Hold any ring—even behind Rook.<br>Release to swing. Drag to another ring to switch.</p><span class="keyboard-hint">TOUCH · LEFT MOUSE · SPACE</span></div>
 <section id="pausePanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="pauseTitle"><div class="panel"><canvas class="panel-gem gem-icon" data-gem="sapphire" width="64" height="64" aria-hidden="true"></canvas><div class="eyebrow">TAKE YOUR TIME</div><h2 id="pauseTitle">Vault on pause.</h2><p>Your run is right where you left it.</p><button id="resume" class="primary-button">RESUME RUN <span>↗</span></button><button id="quit" class="text-button">End run &amp; bank treasure</button></div></section>
 <section id="overPanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="overTitle"><div class="panel result-panel"><div class="eyebrow" id="resultEyebrow">TREASURE SECURED</div><h2 id="overTitle">A brave little run.</h2><p id="deathReason" class="death-reason"></p><div class="result-distance"><span id="endDistance">0</span><small>METERS</small></div><div id="newBest" class="new-best hidden">✦ NEW PERSONAL BEST ✦</div><div class="result-stats"><div><small>GOLD BANKED</small><strong>+<span id="endGold">0</span></strong></div><div><small>CLEAN SWINGS</small><strong id="endSwings">0</strong></div></div><p id="endDelivery" class="end-delivery"></p><p id="endHighlights" class="end-highlights"></p><button id="replay" class="primary-button">RUN AGAIN <span>↗</span></button><button id="backHome" class="text-button">Back to vault</button></div></section>
-<section id="helpPanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel help-panel"><div class="eyebrow">ONE BUTTON. ALL MOMENTUM.</div><h2 id="helpTitle">Meet your next swing.</h2><div class="help-step"><span>01</span><div><h3>Choose any visible ring</h3><p>Hold on a grapple ring to choose it—even behind Rook or at the far edge of the screen. Hold empty space for the easy automatic option.</p></div></div><div class="help-step"><span>02</span><div><h3>Release to swing</h3><p>Let go to carry your momentum. Rook can swing backward too; the chain stays attached while you hold.</p></div></div><div class="help-step"><span>03</span><div><h3>Switch your anchor</h3><p>Release and hold another ring, or drag your held finger onto it. Gold and gems are treasure; red crystal traps are hazards.</p></div></div><div class="help-step"><span>04</span><div><h3>Find your rhythm</h3><p>Release during the lower sweep for a clean swing. Three in a row earn ×2 treasure; six earn ×3. Each ring rewards you once per run.</p></div></div><div class="help-step"><span>05</span><div><h3>Crystal Rush</h3><p>Gems, coins, and clean swings charge a seven-second bonus: extra speed, double treasure, and protection. Traps fold away in the bonus stretch. No extra button.</p></div></div><div class="help-step"><span>06</span><div><h3>Crystal Flight</h3><p>Swing into the rare winged blue crystal. Fly head-first for 10 seconds: hold to rise and release to dive. A shield absorbs one hit during flight. When flight ends, hold to auto-grapple or choose a ring. The pickup activates immediately, even during Rush. Any remaining Rush time pauses and resumes after flight.</p></div></div><div class="help-step"><span>07</span><div><h3>A little room to find your swing</h3><p>The first 500 m have no obstacles. Rings and treasure are still there, so you can find your rhythm. After 500 m, watch for crimson crystal traps above and below. You still need to catch rings to avoid falling.</p></div></div><div class="help-step"><span>08</span><div><h3>A little guardian, two deliveries</h3><p>Bring the sapphire in Rook’s chest to the Sapphire Shrine at 10,000 m. He then carries a ruby to the Ruby Shrine at 20,000 m. The chest gem changes automatically; fly or swing through either destination. After both deliveries, the endless run continues. A new run starts with sapphire again.</p></div></div><p class="help-controls">Phone: hold a ring; drag to switch<br>Computer: hold left mouse on a ring; Space auto-grapples<br>Pause: Esc or P</p><button id="closeHelp" class="primary-button">LET'S SWING <span>↗</span></button></div></section>
+<section id="helpPanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel help-panel"><div class="eyebrow">ONE BUTTON. ALL MOMENTUM.</div><h2 id="helpTitle">Meet your next swing.</h2><div class="help-step"><span>01</span><div><h3>Choose any visible ring</h3><p>Hold on a grapple ring to choose it—even behind Rook or at the far edge of the screen. Hold empty space for the easy automatic option.</p></div></div><div class="help-step"><span>02</span><div><h3>Release to swing</h3><p>Let go to carry your momentum. Rook can swing backward too; the chain stays attached while you hold.</p></div></div><div class="help-step"><span>03</span><div><h3>Switch your anchor</h3><p>Release and hold another ring, or drag your held finger onto it. Gold and gems are treasure; red crystal traps are hazards.</p></div></div><div class="help-step"><span>04</span><div><h3>Find your rhythm</h3><p>Release during the lower sweep for a clean swing. Three in a row earn ×2 treasure; six earn ×3. Each ring rewards you once per run.</p></div></div><div class="help-step"><span>05</span><div><h3>Crystal Rush</h3><p>Gems, coins, and clean swings charge a seven-second bonus: extra speed, double treasure, and protection. Traps fold away in the bonus stretch. No extra button.</p></div></div><div class="help-step"><span>06</span><div><h3>Crystal Flight</h3><p>Swing into the rare winged blue crystal. Fly head-first for 10 seconds: hold to rise and release to dive. A shield absorbs one hit during flight. When flight ends, hold to auto-grapple or choose a ring. The pickup activates immediately, even during Rush. Any remaining Rush time pauses and resumes after flight.</p></div></div><div class="help-step"><span>07</span><div><h3>A little room to find your swing</h3><p>The first 500 m have no obstacles. Rings and treasure are still there, so you can find your rhythm. After 500 m, watch for crimson crystal traps above and below. You still need to catch rings to avoid falling.</p></div></div><div class="help-step"><span>08</span><div><h3>A little guardian, three deliveries</h3><p>Bring the sapphire in Rook’s chest to the Sapphire Shrine at 10,000 m. He then carries a ruby to the Ruby Shrine at 20,000 m. The chest gem changes automatically; fly or swing through either destination. After both deliveries, the endless run continues. A new run starts with sapphire again.</p></div></div><p class="help-controls">Phone: hold a ring; drag to switch<br>Computer: hold left mouse on a ring; Space auto-grapples<br>Pause: Esc or P</p><button id="closeHelp" class="primary-button">LET'S SWING <span>↗</span></button></div></section>
 <div id="saveNotice" class="save-notice hidden" role="status">Saving is unavailable in this browser. You can still play.</div>
 <noscript><div class="noscript">Enable JavaScript to play Emily Game.</div></noscript>
-<script>/* Rook — Grapple Prototype 018. Original dependency-free canvas prototype.
+<script>/* Rook — Grapple Prototype 019. Original dependency-free canvas prototype.
    Art functions are isolated from physics so all visuals remain replaceable. */
 (() => {
 'use strict';
-const BUILD='018', STORAGE='rook.grapple.prototype.v1';
+const BUILD='019', STORAGE='rook.grapple.prototype.v1';
 const TEST=new URLSearchParams(location.search).has('test');
 const $=id=>document.getElementById(id);
 const canvas=$('world'), ctx=canvas.getContext('2d',{alpha:false});
@@ -270,7 +273,8 @@ const CRYSTAL_HEIGHT_SCALE=.90, SAWS_ENABLED=false;
 // A complete opening sightline is clear; future traps are never popped in mid-screen.
 const DELIVERIES=[
  {gem:'sapphire',name:'Sapphire',destination:'SAPPHIRE SHRINE',metres:10000},
- {gem:'ruby',name:'Ruby',destination:'RUBY SHRINE',metres:20000}
+ {gem:'ruby',name:'Ruby',destination:'RUBY SHRINE',metres:20000},
+ {gem:'emerald',name:'Emerald',destination:'EMERALD SHRINE',metres:30000}
 ];
 const DELIVERY_CLEARANCE=850; // Brief, readable handover areas; anchors stay available.
 
@@ -306,16 +310,19 @@ let flightRng,flightLastSpawnM=-Infinity;
 let homeSceneCache=null,startPending=false,startTimer=0;
 let delivered=0,deliveryGlow=0,deliveryFx=null;
 const palette={gold:'#eabb54',pale:'#fff1bb',sapphire:'#38aef5',ink:'#12152a',red:'#f05d77'};
-const defaults={version:1,best:0,gold:0,runs:0,bestSwings:0,sound:true};
+const defaults={version:2,best:0,gold:0,runs:0,bestSwings:0,sound:true,unlockedStart:0,startChoice:0};
 let save={...defaults};
+let selectedStart=0;
 try{
  const raw=localStorage.getItem(STORAGE);let data=null;try{data=JSON.parse(raw||'null');}catch(e){}
  if(data&&typeof data==='object'){
   for(const k of ['best','gold','runs','bestSwings'])if(Number.isFinite(data[k]))save[k]=clamp(Math.floor(data[k]),0,1e12);
   if(typeof data.sound==='boolean')save.sound=data.sound;
+  if(Number.isFinite(data.unlockedStart))save.unlockedStart=clamp(Math.floor(data.unlockedStart),0,DELIVERIES.length);
+  if(Number.isFinite(data.startChoice))save.startChoice=clamp(Math.floor(data.startChoice),0,DELIVERIES.length);
  }
 }catch(e){saveOK=false;}
-function saveData(){try{localStorage.setItem(STORAGE,JSON.stringify(save));}catch(e){saveOK=false;show($('saveNotice'),true);}}
+function saveData(){save.startChoice=selectedStart;try{localStorage.setItem(STORAGE,JSON.stringify(save));}catch(e){saveOK=false;show($('saveNotice'),true);}}
 function show(el,on){el.classList.toggle('hidden',!on);}
 function seeded(s){return()=>{let t=s+=0x6D2B79F5;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;};}
 function hash(n){return ((Math.sin(n*127.1+311.7)*43758.5453123)%1+1)%1;}
@@ -373,7 +380,10 @@ function fitHomeMenu(){
  const textWidth=range.getBoundingClientRect().width;
  if(room>0&&textWidth>room)title.style.fontSize=(parseFloat(titleStyle.fontSize)*(room-1)/textWidth)+'px';
 }
-function refreshHome(){ $('homeBest').innerHTML=fmt(save.best)+' <em>m</em>'; $('homeGold').textContent=fmt(save.gold);fitHomeMenu();fitHomeStats(); }
+function startChoiceLabel(i){return i<=0?'BEGINNING':DELIVERIES[i-1].name.replace(' Shrine','').toUpperCase();}
+function nextDeliveryLabel(done){return done>=DELIVERIES.length?'FREE EXPLORE':DELIVERIES[done].name.replace(' Shrine','').toUpperCase()+' · '+fmt(DELIVERIES[done].metres)+' m';}
+function syncStartChoice(){selectedStart=clamp(Math.floor(selectedStart),0,save.unlockedStart);const b=$('startPoint');if(!b)return;show(b,save.unlockedStart>0);b.textContent='START FROM · '+startChoiceLabel(selectedStart);b.setAttribute('aria-label','Choose starting shrine. Current selection: '+startChoiceLabel(selectedStart));}
+function refreshHome(){ selectedStart=clamp(Number.isFinite(save.startChoice)?save.startChoice:0,0,save.unlockedStart); $('homeBest').innerHTML=fmt(save.best)+' <em>m</em>'; $('homeGold').textContent=fmt(save.gold);syncStartChoice();fitHomeMenu();fitHomeStats(); }
 function refreshSound(){document.querySelectorAll('.sound-button').forEach(b=>{b.textContent=save.sound?'♪':'♪̸';b.setAttribute('aria-pressed',String(save.sound));b.setAttribute('aria-label',save.sound?'Turn sound off':'Turn sound on');});}
 function initAudio(){
  if(!save.sound)return;
@@ -456,13 +466,16 @@ function playerScreenX(){return Math.min(330,viewW*.265);}
 
 /* buildUntil is implemented in the 006 gameplay section below. */
 
-function startRun(testSeed){
+function startRun(testSeed,startAt=selectedStart){
  stopDeathSound();cancelStartPress();setHomeChrome(false);
  seed=(testSeed===undefined?(Math.random()*4294967295)>>>0:testSeed>>>0);rng=seeded(seed);
  anchors=[];obstacles=[];pickups=[];particles=[];labels=[];
- nextAnchorX=330;anchorId=0;segmentIndex=0;generationX=0;
- p={x:START_X,y:START_PLATFORM.top-ROOK_FOOT_OFFSET,vx:0,vy:0,r:19*.98,rope:null,angle:0,grounded:true};
- runTime=0;runGold=0;distance=0;cleanSwings=0;combo=0;nextMilestone=250;totalCollected=0;
+ startAt=clamp(Math.floor(startAt||0),0,save.unlockedStart);
+ const startMetres=startAt>0?DELIVERIES[startAt-1].metres:0;
+ const startX=START_X+startMetres*10;
+ nextAnchorX=startAt>0?startX+155:330;anchorId=startAt*1000;segmentIndex=startAt*1000;generationX=nextAnchorX;
+ p={x:startX,y:START_PLATFORM.top-ROOK_FOOT_OFFSET,vx:0,vy:0,r:19*.98,rope:null,angle:0,grounded:true};
+ runTime=0;runGold=0;distance=startMetres;cleanSwings=0;combo=0;nextMilestone=Math.max(250,Math.ceil((startMetres+250)/250)*250);totalCollected=0;
  banked=false;bestThisRun=false;fallRotation=0;lastRopeId=-1;held=false;keyHolding=false;pointer=null;shieldTime=0;lastCoinTone=-10;
  inputMode='auto';hoverPoint=null;dragOrigin=null;
  bestCombo=0;patternIndex=0;announcedPattern=-1;
@@ -471,7 +484,7 @@ function startRun(testSeed){
  flightTime=0;flightShield=0;flightWarned=false;flightCount=0;flightRecovery=0;suspendedRush=null;death=null;
  $('pauseButton').disabled=false;
  flightRng=seeded(seed^0x6f32ac91);flightLastSpawnM=-Infinity;
- delivered=0;deliveryGlow=0;deliveryFx=null;
+ delivered=startAt;deliveryGlow=0;deliveryFx=null;
  camera=p.x-playerScreenX();buildUntil(camera+viewW+1050);
  mode='ready';readyType='start';accumulator=0;toastLife=0;
  const entryX=camera-60,travel=START_X-entryX;
@@ -485,8 +498,10 @@ function startRun(testSeed){
 }
 
 function setDepartureHint(){
- $('readyTitle').textContent='Bring the sapphire home.';
- $('readyText').innerHTML='Sapphire Shrine · 10,000 m<br>Hold a ring to leave the platform. Release to swing.';
+ if(delivered>=DELIVERIES.length){$('readyTitle').textContent='Keep the vault glowing.';$('readyText').innerHTML='All deliveries complete<br>Hold a ring to leave the platform. Release to swing.';return;}
+ const d=DELIVERIES[delivered];
+ $('readyTitle').textContent='Bring the '+d.gem+' home.';
+ $('readyText').innerHTML=d.destination+' · '+fmt(d.metres)+' m<br>Hold a ring to leave the platform. Release to swing.';
 }
 function updateDeparture(dt){
  // Presentation has its own clock. No distance, treasure, trap, Rush, or
@@ -656,7 +671,9 @@ function updateDeath(dt){
 function completeFinish(reason,quit=false){
  mode='over';death=null;held=false;keyHolding=false;pointer=null;p.rope=null;accumulator=0;
  $('endDistance').textContent=fmt(distance);$('endGold').textContent=fmt(runGold);$('endSwings').textContent=fmt(cleanSwings);$('endHighlights').textContent='Best streak '+bestCombo+'  ·  Rushes '+rushCount+'  ·  Flights '+flightCount;
- $('endDelivery').textContent=delivered===2?'BOTH GEMS DELIVERED':delivered===1?'SAPPHIRE DELIVERED · RUBY STILL ON ITS WAY':'SAPPHIRE DELIVERY · '+fmt(Math.max(0,10000-distance))+' m TO GO';
+ if(delivered>=DELIVERIES.length)$('endDelivery').textContent='ALL DELIVERIES COMPLETE';
+ else if(delivered>0){const done=DELIVERIES[delivered-1].gem.toUpperCase(),next=DELIVERIES[delivered];$('endDelivery').textContent=done+' DELIVERED · '+next.gem.toUpperCase()+' STILL ON ITS WAY';}
+ else $('endDelivery').textContent='SAPPHIRE DELIVERY · '+fmt(Math.max(0,DELIVERIES[0].metres-distance))+' m TO GO';
  $('deathReason').textContent=reason;$('resultEyebrow').textContent=quit?'EXPEDITION COMPLETE':'TREASURE SECURED';
  show($('newBest'),bestThisRun);show($('overPanel'),true);updateHUD();
 }
@@ -766,9 +783,14 @@ function updateDelivery(dt){
   const d=DELIVERIES[delivered];
   deliveryFx={index:delivered,life:1.6,fromX:p.x,fromY:p.y+25*ROOK_SCALE};
   delivered++;deliveryGlow=2.4;
+  save.unlockedStart=Math.max(save.unlockedStart,delivered);
+  if(selectedStart>save.unlockedStart)selectedStart=save.unlockedStart;
+  saveData();
   // Do not reset momentum, flight, Rush, bank, combo, or the distance counter.
   burst(p.x,p.y+15,9,gemColors(d.gem).light,90);sfx('delivery');
-  toast(delivered===1?'SAPPHIRE DELIVERED · RUBY → 20,000 m':'BOTH GEMS DELIVERED · KEEP EXPLORING',3.5);
+  if(delivered===1)toast('SAPPHIRE DELIVERED · RUBY → 20,000 m',3.5);
+  else if(delivered===2)toast('RUBY DELIVERED · EMERALD → 30,000 m',3.5);
+  else toast('EMERALD DELIVERED · KEEP EXPLORING',3.5);
  }
 }
 
@@ -1064,11 +1086,11 @@ function update(dt){
 }
 function updateHUD(){
  $('distance').textContent=fmt(distance);$('runGold').textContent=fmt(runGold);
- const d=DELIVERIES[Math.min(delivered,DELIVERIES.length-1)];
- $('deliveryText').textContent=delivered===2?'BOTH GEMS DELIVERED':d.name.toUpperCase()+' → '+fmt(d.metres)+' m';
- $('deliveryHUD').classList.toggle('ruby',delivered===1);$('deliveryHUD').classList.toggle('done',delivered===2);
- paintGemIcon($('deliveryGem'),d.gem);
- $('deliveryHUD').setAttribute('aria-label',delivered===2?'Both gems delivered; endless exploration':d.name+' delivery to '+fmt(d.metres)+' metres; '+fmt(Math.max(0,d.metres-distance))+' metres remaining');
+ const done=delivered>=DELIVERIES.length,d=DELIVERIES[Math.min(delivered,DELIVERIES.length-1)];
+ $('deliveryText').textContent=done?'ALL GEMS DELIVERED':d.name.toUpperCase()+' → '+fmt(d.metres)+' m';
+ $('deliveryHUD').classList.toggle('ruby',!done&&d.gem==='ruby');$('deliveryHUD').classList.toggle('done',done);
+ paintGemIcon($('deliveryGem'),done?'emerald':d.gem);
+ $('deliveryHUD').setAttribute('aria-label',done?'All gems delivered; endless exploration':d.name+' delivery to '+fmt(d.metres)+' metres; '+fmt(Math.max(0,d.metres-distance))+' metres remaining');
  const mul=treasureMultiplier();$('comboValue').textContent='×'+mul;
  $('comboBadge').classList.toggle('lit',combo>=3||rushTime>0);
  $('comboBadge').setAttribute('aria-label',mul+' times treasure; '+combo+' clean swing streak');
@@ -1094,16 +1116,27 @@ function star(g,x,y,r,alpha=1,color='#fff6d7'){
  g.save();g.globalAlpha*=alpha;g.fillStyle=color;g.beginPath();g.moveTo(x,y-r);g.quadraticCurveTo(x+r*.18,y-r*.18,x+r,y);g.quadraticCurveTo(x+r*.18,y+r*.18,x,y+r);g.quadraticCurveTo(x-r*.18,y+r*.18,x-r,y);g.quadraticCurveTo(x-r*.18,y-r*.18,x,y-r);g.fill();g.restore();
 }
 function gemColors(type){return{
- sapphire:{light:'#bfe8ff',mid:'#2caef3',dark:'#234fa8'},emerald:{light:'#d4ffe3',mid:'#41cf7d',dark:'#1f7f46'},ruby:{light:'#ffd0dc',mid:'#f05b78',dark:'#ad264f'},diamond:{light:'#ffffff',mid:'#b3e8fc',dark:'#778dd9'},amethyst:{light:'#ecd7ff',mid:'#ad81df',dark:'#57458f'}
+ sapphire:{light:'#bfe8ff',mid:'#2caef3',dark:'#234fa8'},emerald:{light:'#d4ffe3',mid:'#41cf7d',dark:'#1f7f46'},ruby:{light:'#ffd0dc',mid:'#f05b78',dark:'#ad264f'},diamond:{light:'#ffffff',mid:'#eef7ff',dark:'#b3c8de'},amethyst:{light:'#f0d7ff',mid:'#9738df',dark:'#4a177d'}
  }[type]||{light:'#ecd7ff',mid:'#ad81df',dark:'#57458f'};}
 function gem(g,x,y,r,type='sapphire',rot=0){
  const c=gemColors(type);g.save();g.translate(x,y);g.rotate(rot);
- poly(g,[[-r*.57,-r*.66],[r*.45,-r*.77],[r*.83,-r*.13],[0,r],[-r*.88,-r*.06]],c.mid,c.dark,1.5);
- poly(g,[[-r*.57,-r*.66],[r*.45,-r*.77],[r*.3,-r*.17],[-r*.35,-r*.11]],c.light);
- poly(g,[[r*.45,-r*.77],[r*.83,-r*.13],[0,r],[r*.3,-r*.17]],c.dark);
- poly(g,[[-r*.88,-r*.06],[-r*.35,-r*.11],[0,r]],c.light);
- poly(g,[[-r*.35,-r*.11],[r*.3,-r*.17],[0,r]],c.mid);
- g.strokeStyle='#ffffff99';g.lineWidth=1.1;g.beginPath();g.moveTo(-r*.5,-r*.53);g.lineTo(r*.34,-r*.64);g.stroke();g.restore();
+ if(type==='amethyst'){
+  poly(g,[[0,-r*.98],[-r*.34,-r*.56],[-r*.26,r*.02],[r*.24,r*.02],[r*.36,-r*.56]],c.mid,c.dark,1.4);
+  poly(g,[[0,-r*.98],[-r*.34,-r*.56],[-r*.26,r*.02],[-r*.06,-r*.15],[-r*.07,-r*.72]],c.light);
+  poly(g,[[0,-r*.98],[r*.36,-r*.56],[r*.24,r*.02],[r*.07,-r*.12],[r*.1,-r*.71]],c.dark);
+  poly(g,[[-r*.07,-r*.72],[0,-r*.98],[r*.1,-r*.71],[r*.07,-r*.12],[-r*.06,-r*.15]],c.mid);
+  g.strokeStyle='#ffffffb8';g.lineWidth=1;g.beginPath();g.moveTo(-r*.18,-r*.66);g.lineTo(r*.14,-r*.82);g.stroke();
+  star(g,r*.22,-r*.48,r*.16,.75,'#ffffff');
+ }else{
+  poly(g,[[-r*.57,-r*.66],[r*.45,-r*.77],[r*.83,-r*.13],[0,r],[-r*.88,-r*.06]],c.mid,c.dark,1.5);
+  poly(g,[[-r*.57,-r*.66],[r*.45,-r*.77],[r*.3,-r*.17],[-r*.35,-r*.11]],c.light);
+  poly(g,[[r*.45,-r*.77],[r*.83,-r*.13],[0,r],[r*.3,-r*.17]],c.dark);
+  poly(g,[[-r*.88,-r*.06],[-r*.35,-r*.11],[0,r]],c.light);
+  poly(g,[[-r*.35,-r*.11],[r*.3,-r*.17],[0,r]],c.mid);
+  g.strokeStyle=type==='diamond'?'#ffffffde':'#ffffff99';g.lineWidth=1.1;g.beginPath();g.moveTo(-r*.5,-r*.53);g.lineTo(r*.34,-r*.64);g.stroke();
+  if(type==='diamond'){star(g,r*.1,-r*.42,r*.16,.95,'#ffffff');star(g,-r*.22,-r*.08,r*.11,.75,'#ffffff');}
+ }
+ g.restore();
 }
 function paintGemIcon(icon,type){
  if(!icon||icon.dataset.paintedGem===type)return;
@@ -1126,10 +1159,12 @@ function metalBall(g,x,y,r=8){
 
 function crystal(g,x,y,w,h,type='amethyst',rot=0){
  const c=gemColors(type);g.save();g.translate(x,y);g.rotate(rot);
- poly(g,[[0,-h],[-w*.48,-h*.63],[-w*.39,0],[w*.4,0],[w*.51,-h*.62]],c.mid,c.dark,1.2);
- poly(g,[[0,-h],[-w*.48,-h*.63],[-w*.39,0],[-w*.08,-h*.12],[-w*.1,-h*.67]],c.light);
- poly(g,[[0,-h],[w*.51,-h*.62],[w*.4,0],[w*.1,-h*.1],[w*.15,-h*.65]],c.dark);
- poly(g,[[-w*.1,-h*.67],[0,-h],[w*.15,-h*.65],[w*.1,-h*.1],[-w*.08,-h*.12]],c.mid);
+ const narrow=type==='amethyst',sx=narrow?.78:1;
+ poly(g,[[0,-h],[-w*.48*sx,-h*.63],[-w*.39*sx,0],[w*.4*sx,0],[w*.51*sx,-h*.62]],c.mid,c.dark,1.2);
+ poly(g,[[0,-h],[-w*.48*sx,-h*.63],[-w*.39*sx,0],[-w*.08*sx,-h*.12],[-w*.1*sx,-h*.67]],c.light);
+ poly(g,[[0,-h],[w*.51*sx,-h*.62],[w*.4*sx,0],[w*.1*sx,-h*.1],[w*.15*sx,-h*.65]],c.dark);
+ poly(g,[[-w*.1*sx,-h*.67],[0,-h],[w*.15*sx,-h*.65],[w*.1*sx,-h*.1],[-w*.08*sx,-h*.12]],c.mid);
+ if(narrow)star(g,w*.04,-h*.55,Math.max(2,w*.1),.6,'#ffffff');
  g.restore();
 }
 
@@ -1737,11 +1772,12 @@ function animateStart(){
  // Leave the pressed face visible for one short beat, even on a quick tap.
  startTimer=setTimeout(()=>{
   const mayStart=mode==='home'&&!document.hidden&&$('helpPanel').classList.contains('hidden');
-  cancelStartPress();if(mayStart)startRun();
+  cancelStartPress();if(mayStart)startRun(undefined,selectedStart);
  },reducedMotion?70:140);
 }
 $('play').addEventListener('click',animateStart);
-$('replay').addEventListener('click',()=>{initAudio();startRun();});
+$('startPoint').addEventListener('click',()=>{selectedStart=(selectedStart+1)%(save.unlockedStart+1);syncStartChoice();saveData();fitHomeMenu();fitHomeStats();});
+$('replay').addEventListener('click',()=>{initAudio();startRun(undefined,selectedStart);});
 $('backHome').addEventListener('click',toHome);
 $('pauseButton').addEventListener('click',pause);
 $('resume').addEventListener('click',resume);
@@ -1812,7 +1848,7 @@ if(TEST){
   start:(s=12345)=>startRun(s),
   press,lift,pause,resume,toHome,
   step:(seconds)=>{for(let i=0;i<Math.round(seconds/DT);i++)update(DT);render(visualTime);updateHUD();return mode;},
-  snapshot:()=>({mode,death:death?{...death,bottom:deathBottom(),padding:DEATH_PADDING}:null,rookPose:p?currentRookPose():null,departure:{...departure},seed,runTime,distance,delivery:{completed:delivered,gem:carriedGem(),target:delivered<2?DELIVERIES[delivered].metres:null,glow:deliveryGlow},gold:runGold,cleanSwings,combo,bestCombo,held,banked,rush:{charge:rushCharge,time:rushTime,blend:rushBlend,pending:rushPending,count:rushCount,grace:rushGrace,cooldown:rushCooldown,zones:rushZones.map(z=>({...z}))},multiplier:treasureMultiplier(),speed:speed(),patternIndex,save:{...save},viewport:{vw,vh,scale,viewW,offsetY},flight:{time:flightTime,shield:flightShield,queued:false,suspendedRush:suspendedRush?{...suspendedRush}:null,count:flightCount,recovery:flightRecovery},opening:{clear:openingClear(),metres:OBSTACLE_START_DISTANCE},p:p?{x:p.x,y:p.y,vx:p.vx,vy:p.vy,r:p.r,angle:p.angle,grounded:p.grounded,rope:p.rope?{id:p.rope.a.id,angle:p.rope.angle,omega:p.rope.omega,length:p.rope.length,manual:p.rope.manual,age:p.rope.age}:null}:null,camera,inputMode,candidate:candidate(),anchors:anchors.map(a=>({...a,visible:anchorVisible(a),screenX:(a.x-camera)*scale,screenY:(a.y+offsetY)*scale})),counts:{anchors:anchors.length,obstacles:obstacles.length,pickups:pickups.length,particles:particles.length,trail:trail.length,rushZones:rushZones.length},pickups:pickups.map(c=>({...c})),obstacles:obstacles.map(o=>({...o,liveY:o.type==='saw'?sawY(o):o.y}))}),
+  snapshot:()=>({mode,death:death?{...death,bottom:deathBottom(),padding:DEATH_PADDING}:null,rookPose:p?currentRookPose():null,departure:{...departure},seed,runTime,distance,delivery:{completed:delivered,gem:carriedGem(),target:delivered<DELIVERIES.length?DELIVERIES[delivered].metres:null,glow:deliveryGlow},gold:runGold,cleanSwings,combo,bestCombo,held,banked,rush:{charge:rushCharge,time:rushTime,blend:rushBlend,pending:rushPending,count:rushCount,grace:rushGrace,cooldown:rushCooldown,zones:rushZones.map(z=>({...z}))},multiplier:treasureMultiplier(),speed:speed(),patternIndex,save:{...save},viewport:{vw,vh,scale,viewW,offsetY},flight:{time:flightTime,shield:flightShield,queued:false,suspendedRush:suspendedRush?{...suspendedRush}:null,count:flightCount,recovery:flightRecovery},opening:{clear:openingClear(),metres:OBSTACLE_START_DISTANCE},p:p?{x:p.x,y:p.y,vx:p.vx,vy:p.vy,r:p.r,angle:p.angle,grounded:p.grounded,rope:p.rope?{id:p.rope.a.id,angle:p.rope.angle,omega:p.rope.omega,length:p.rope.length,manual:p.rope.manual,age:p.rope.age}:null}:null,camera,inputMode,candidate:candidate(),anchors:anchors.map(a=>({...a,visible:anchorVisible(a),screenX:(a.x-camera)*scale,screenY:(a.y+offsetY)*scale})),counts:{anchors:anchors.length,obstacles:obstacles.length,pickups:pickups.length,particles:particles.length,trail:trail.length,rushZones:rushZones.length},pickups:pickups.map(c=>({...c})),obstacles:obstacles.map(o=>({...o,liveY:o.type==='saw'?sawY(o):o.y}))}),
   setPlayer:(values)=>Object.assign(p,values),
   finish:(why='Test complete',quit=false)=>finish(why,quit),
   jumpPickup:()=>{const c=pickups.find(c=>!c.taken&&c.x>p.x);if(c){p.x=c.x;p.y=c.y-5;p.rope=null;}},
