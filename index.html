@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dfe3e7">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 027.">
+<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 028.">
 <title>Emily Game · Grapple Prototype 017</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2716%27%20fill%3D%27%2317192c%27%2F%3E%3Crect%20x%3D%2719%27%20y%3D%2732%27%20width%3D%2726%27%20height%3D%2727%27%20rx%3D%278%27%20fill%3D%27%23d8a747%27%2F%3E%3Cpath%20d%3D%27M32%2041L39%2046%2032%2055%2025%2046Z%27%20fill%3D%27%2366cfff%27%2F%3E%3Crect%20x%3D%2710%27%20y%3D%276%27%20width%3D%2744%27%20height%3D%2732%27%20rx%3D%2712%27%20fill%3D%27%23eaba4c%27%2F%3E%3Crect%20x%3D%2717%27%20y%3D%2715%27%20width%3D%2730%27%20height%3D%2716%27%20rx%3D%276%27%20fill%3D%27%23fff0c9%27%2F%3E%3Ccircle%20cx%3D%2725%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3Ccircle%20cx%3D%2739%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3C%2Fsvg%3E">
 <style>:root{color-scheme:dark;--ink:#101121;--gold:#efc464;--pale:#fff1c9;--muted:#a7a4b3;--blue:#8dd9ff;--border:rgba(237,194,100,.24)}
@@ -339,7 +339,7 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 </header>
  <div class="home-inner">
   <div class="hero-wrap"><canvas id="hero" width="700" height="680" aria-label="Rook, a tiny gold golem with a sapphire core and big golden hands"></canvas></div>
-  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>027</span></div>
+  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>028</span></div>
    <button id="play" class="primary-button" type="button" aria-label="Start"><span class="start-label">START</span></button>
    <button id="startPoint" class="start-point-button hidden" type="button" aria-label="Choose starting shrine">START FROM · BEGINNING</button>
    <p class="control-caption"><b>Hold a ring</b> to grapple. <b>Release</b> to swing.</p>
@@ -362,11 +362,11 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 <section id="helpPanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel help-panel"><div class="eyebrow">ONE BUTTON. ALL MOMENTUM.</div><h2 id="helpTitle">Meet your next swing.</h2><div class="help-step"><span>01</span><div><h3>Choose any visible ring</h3><p>Hold on a grapple ring to choose it—even behind Rook or at the far edge of the screen. Hold empty space for the easy automatic option.</p></div></div><div class="help-step"><span>02</span><div><h3>Release to swing</h3><p>Let go to carry your momentum. Rook can swing backward too; the chain stays attached while you hold.</p></div></div><div class="help-step"><span>03</span><div><h3>Switch your anchor</h3><p>Release and hold another ring, or drag your held finger onto it. Gold and gems are treasure; red crystal traps are hazards.</p></div></div><div class="help-step"><span>04</span><div><h3>Find your rhythm</h3><p>Release during the lower sweep for a clean swing. Three in a row earn ×2 treasure; six earn ×3. Each ring rewards you once per run.</p></div></div><div class="help-step"><span>05</span><div><h3>Crystal Rush</h3><p>Gems, coins, and clean swings charge a seven-second bonus: extra speed, double treasure, and protection. Traps fold away in the bonus stretch. No extra button.</p></div></div><div class="help-step"><span>06</span><div><h3>Crystal Flight</h3><p>Swing into the rare winged blue crystal. Fly head-first for 10 seconds: hold to rise and release to dive. A shield absorbs one hit during flight. When flight ends, hold to auto-grapple or choose a ring. The pickup activates immediately, even during Rush. Any remaining Rush time pauses and resumes after flight.</p></div></div><div class="help-step"><span>07</span><div><h3>A little room to find your swing</h3><p>The first 500 m have no obstacles. Rings and treasure are still there, so you can find your rhythm. After 500 m, watch for crimson crystal traps above and below. You still need to catch rings to avoid falling.</p></div></div><div class="help-step"><span>08</span><div><h3>A little guardian, four deliveries</h3><p>Bring Sapphire to 10,000 m, Ruby to 20,000 m, Emerald to 30,000 m, and Amethyst to 40,000 m. Rook’s chest gem changes automatically after each delivery. Once a shrine is unlocked, the Home Screen can start a future run directly on that shrine’s landing deck.</p></div></div><p class="help-controls">Phone: hold a ring; drag to switch<br>Computer: hold left mouse on a ring; Space auto-grapples<br>Pause: Esc or P</p><button id="closeHelp" class="primary-button">LET'S SWING <span>↗</span></button></div></section>
 <div id="saveNotice" class="save-notice hidden" role="status">Saving is unavailable in this browser. You can still play.</div>
 <noscript><div class="noscript">Enable JavaScript to play Emily Game.</div></noscript>
-<script>/* Rook — Grapple Prototype 027. Original dependency-free canvas prototype.
+<script>/* Rook — Grapple Prototype 028. Original dependency-free canvas prototype.
    Art functions are isolated from physics so all visuals remain replaceable. */
 (() => {
 'use strict';
-const BUILD='027', STORAGE='rook.grapple.prototype.v1';
+const BUILD='028', STORAGE='rook.grapple.prototype.v1';
 const TEST=new URLSearchParams(location.search).has('test');
 const $=id=>document.getElementById(id);
 const canvas=$('world'), ctx=canvas.getContext('2d',{alpha:false});
@@ -608,6 +608,9 @@ function startRun(testSeed,startAt=selectedStart){
  $('pauseButton').disabled=false;
  flightRng=seeded(seed^0x6f32ac91);flightLastSpawnM=-Infinity;
  delivered=startAt;deliveryGlow=0;deliveryFx=null;
+ // Rebuild cached gameplay scenery for the gem carried at this checkpoint.
+ // Without this, a Ruby/Emerald/Amethyst checkpoint could reuse Sapphire scenery from the previous run.
+ sceneryCache=null;
  camera=p.x-playerScreenX();buildUntil(camera+viewW+1050);
  if(startAt>0)pickups=pickups.filter(c=>c.type==='flight'||c.x>runStartX+SHRINE_PLATFORM.halfWidth+90);
  mode='ready';readyType='start';accumulator=0;toastLife=0;
@@ -1477,7 +1480,7 @@ function buildSceneryCache(){
    g.restore();
   }
  });
- return{far,mid,near,quality};
+ return{far,mid,near,quality,themeGem};
 }
 function drawSceneryTile(layer,cam,factor,alpha=1){
  const w=layer.width,shift=((cam*factor)%w+w)%w;
@@ -2029,7 +2032,7 @@ if(TEST){
   homeCache:()=>homeSceneCache?{width:homeSceneCache.canvas.width,height:homeSceneCache.canvas.height}:null,
   setRush:values=>{if('time' in values)rushTime=values.time;if('charge' in values)rushCharge=values.charge;if('cooldown' in values)rushCooldown=values.cooldown;},
   constants:{DT,BUILD,RUSH_REWARD_GAP,RUSH_REWARD_STEP,ROOK_SCALE,START_PLATFORM,START_X,ROOK_FOOT_OFFSET,ENTRY_SPEED,ANCHOR_TOUCH_RADIUS,RUSH_DURATION,RUSH_GOAL,FLIGHT_DURATION,FLIGHT_SPAWN_CHANCE,FLIGHT_MIN_GAP,OBSTACLE_START_DISTANCE,OBSTACLE_START_X,CRYSTAL_HEIGHT_SCALE,SAWS_ENABLED,DELIVERIES,DELIVERY_CLEARANCE},
-  perf:()=>({cache:sceneryCache?{quality:sceneryCache.quality,canvases:[sceneryCache.far,sceneryCache.mid,sceneryCache.near].map(x=>[x.canvas.width,x.canvas.height])}:null})
+  perf:()=>({cache:sceneryCache?{quality:sceneryCache.quality,themeGem:sceneryCache.themeGem,canvases:[sceneryCache.far,sceneryCache.mid,sceneryCache.near].map(x=>[x.canvas.width,x.canvas.height])}:null})
  };
 }
 })();
