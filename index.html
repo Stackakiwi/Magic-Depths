@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dfe3e7">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 020.">
+<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 022.">
 <title>Emily Game · Grapple Prototype 017</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2716%27%20fill%3D%27%2317192c%27%2F%3E%3Crect%20x%3D%2719%27%20y%3D%2732%27%20width%3D%2726%27%20height%3D%2727%27%20rx%3D%278%27%20fill%3D%27%23d8a747%27%2F%3E%3Cpath%20d%3D%27M32%2041L39%2046%2032%2055%2025%2046Z%27%20fill%3D%27%2366cfff%27%2F%3E%3Crect%20x%3D%2710%27%20y%3D%276%27%20width%3D%2744%27%20height%3D%2732%27%20rx%3D%2712%27%20fill%3D%27%23eaba4c%27%2F%3E%3Crect%20x%3D%2717%27%20y%3D%2715%27%20width%3D%2730%27%20height%3D%2716%27%20rx%3D%276%27%20fill%3D%27%23fff0c9%27%2F%3E%3Ccircle%20cx%3D%2725%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3Ccircle%20cx%3D%2739%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3C%2Fsvg%3E">
 <style>:root{color-scheme:dark;--ink:#101121;--gold:#efc464;--pale:#fff1c9;--muted:#a7a4b3;--blue:#8dd9ff;--border:rgba(237,194,100,.24)}
@@ -214,6 +214,61 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 #home .home-menu-slot .home-copy{align-self:start;transform:translateX(var(--menu-offset-x,0px))}
 
 .start-point-button{width:100%;min-height:38px;margin-top:10px;border:1px solid #8f9aa450;border-radius:9px;background:linear-gradient(180deg,#d8dde2 0%,#bcc4cc 50%,#d2d8de 100%);color:#49545e;font-size:10px;font-weight:700;letter-spacing:1.4px;box-shadow:inset 0 1px 0 #fafdff,0 2px 0 #88919a55;transition:filter .15s,color .15s,border-color .15s}.start-point-button:hover{filter:brightness(1.03);color:#2e3942;border-color:#b0bac350}.start-point-button:active{transform:translateY(2px);box-shadow:inset 0 1px 0 #fafdff,0 1px 0 #88919a55}@media(max-width:720px) and (orientation:portrait){.start-point-button{min-height:36px;font-size:9px;margin-top:8px}}@media(max-height:520px) and (orientation:landscape){.start-point-button{min-height:31px;font-size:8px;margin-top:7px}}
+
+/* 021: compact four-delivery strip; all gems and labels use one size. */
+#home .home-footer{
+  width:min(650px,calc(100% - 76px));
+  padding:8px 14px;
+  gap:0;
+  background:linear-gradient(180deg,#2c3940 0%,#1b262c 100%);
+  border-color:#8f7b52;
+}
+#home .route-note{
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px 18px;
+  align-items:center;
+  justify-items:center;
+}
+#home .route-stop{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  min-width:0;
+  font-size:8px;
+  line-height:14px;
+  letter-spacing:.85px;
+  white-space:nowrap;
+}
+#home .route-stop .gem-icon,
+#home .route-sapphire,#home .route-ruby,#home .route-emerald,#home .route-amethyst{
+  width:16px!important;
+  height:16px!important;
+  flex:0 0 16px;
+}
+#home .route-separator{display:none}
+#home .build-note{display:none!important}
+@media(max-width:720px) and (orientation:portrait){
+ #home .home-footer{width:calc(100% - 40px);padding:7px 10px}
+ #home .route-note{gap:5px 10px}
+ #home .route-stop{font-size:7px;line-height:12px;letter-spacing:.55px;gap:5px}
+ #home .route-stop .gem-icon,#home .route-sapphire,#home .route-ruby,#home .route-emerald,#home .route-amethyst{width:14px!important;height:14px!important;flex-basis:14px}
+}
+@media(max-height:520px) and (orientation:landscape){
+ #home .home-footer{width:min(600px,calc(100% - 70px));padding:5px 10px}
+ #home .route-note{grid-template-columns:repeat(4,1fr);gap:9px}
+ #home .route-stop{font-size:6px;line-height:9px;letter-spacing:.3px;gap:4px}
+ #home .route-stop .gem-icon,#home .route-sapphire,#home .route-ruby,#home .route-emerald,#home .route-amethyst{width:12px!important;height:12px!important;flex-basis:12px}
+}
+
+/* 021: clearer blue-black steel, intentionally less purple / navy. */
+#homeTop .brand{background:linear-gradient(180deg,#344149 0%,#1d282e 100%)!important}
+#homeTop .icon-button{background:linear-gradient(180deg,#344149 0%,#1c272d 100%)!important}
+.status{background:rgba(28,38,44,.88)!important}
+.panel{background:linear-gradient(150deg,#2b3940 0%,#182329 78%)!important}
+
 </style>
 </head>
 <body>
@@ -226,14 +281,14 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 </header>
  <div class="home-inner">
   <div class="hero-wrap"><canvas id="hero" width="700" height="680" aria-label="Rook, a tiny gold golem with a sapphire core and big golden hands"></canvas></div>
-  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>020</span></div>
+  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>022</span></div>
    <button id="play" class="primary-button" type="button" aria-label="Start"><span class="start-label">START</span></button>
    <button id="startPoint" class="start-point-button hidden" type="button" aria-label="Choose starting shrine">START FROM · BEGINNING</button>
    <p class="control-caption"><b>Hold a ring</b> to grapple. <b>Release</b> to swing.</p>
    <div class="stats-strip"><div><small>PERSONAL BEST</small><strong id="homeBest">0 <em>m</em></strong></div><span class="stat-divider"></span><div><small>TREASURE BANK</small><strong><span class="tiny-coin" aria-hidden="true">✦</span> <span id="homeGold">0</span></strong></div></div>
   </div></div>
  </div>
- <footer class="home-footer"><span class="route-note"><span class="route-stop"><canvas class="route-sapphire gem-icon" data-gem="sapphire" width="64" height="64" aria-hidden="true"></canvas>SAPPHIRE · 10,000 m</span><i class="route-separator" aria-hidden="true"></i><span class="route-stop"><canvas class="route-ruby gem-icon" data-gem="ruby" width="64" height="64" aria-hidden="true"></canvas>RUBY · 20,000 m</span><i class="route-separator" aria-hidden="true"></i><span class="route-stop"><canvas class="route-emerald gem-icon" data-gem="emerald" width="64" height="64" aria-hidden="true"></canvas>EMERALD · 30,000 m</span><i class="route-separator" aria-hidden="true"></i><span class="route-stop"><canvas class="route-amethyst gem-icon" data-gem="amethyst" width="64" height="64" aria-hidden="true"></canvas>AMETHYST · 40,000 m</span></span><span class="build-note">NO ADS OR PURCHASES</span></footer>
+ <footer class="home-footer"><span class="route-note"><span class="route-stop"><canvas class="route-sapphire gem-icon" data-gem="sapphire" width="64" height="64" aria-hidden="true"></canvas>SAPPHIRE · 10,000 m</span><i class="route-separator" aria-hidden="true"></i><span class="route-stop"><canvas class="route-ruby gem-icon" data-gem="ruby" width="64" height="64" aria-hidden="true"></canvas>RUBY · 20,000 m</span><i class="route-separator" aria-hidden="true"></i><span class="route-stop"><canvas class="route-emerald gem-icon" data-gem="emerald" width="64" height="64" aria-hidden="true"></canvas>EMERALD · 30,000 m</span><i class="route-separator" aria-hidden="true"></i><span class="route-stop"><canvas class="route-amethyst gem-icon" data-gem="amethyst" width="64" height="64" aria-hidden="true"></canvas>AMETHYST · 40,000 m</span></span></footer>
 </main>
 <section id="hud" class="hidden" aria-label="Run status">
  <div class="hud-left"><div class="hud-metric"><small>DISTANCE</small><strong><span id="distance">0</span><em> m</em></strong></div><div class="hud-metric gold-metric"><small>THIS RUN</small><strong><span class="tiny-coin">✦</span> <span id="runGold">0</span></strong><span class="combo-badge" id="comboBadge" aria-label="1 times treasure"><span id="comboValue">×1</span></span></div></div>
@@ -249,11 +304,11 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 <section id="helpPanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel help-panel"><div class="eyebrow">ONE BUTTON. ALL MOMENTUM.</div><h2 id="helpTitle">Meet your next swing.</h2><div class="help-step"><span>01</span><div><h3>Choose any visible ring</h3><p>Hold on a grapple ring to choose it—even behind Rook or at the far edge of the screen. Hold empty space for the easy automatic option.</p></div></div><div class="help-step"><span>02</span><div><h3>Release to swing</h3><p>Let go to carry your momentum. Rook can swing backward too; the chain stays attached while you hold.</p></div></div><div class="help-step"><span>03</span><div><h3>Switch your anchor</h3><p>Release and hold another ring, or drag your held finger onto it. Gold and gems are treasure; red crystal traps are hazards.</p></div></div><div class="help-step"><span>04</span><div><h3>Find your rhythm</h3><p>Release during the lower sweep for a clean swing. Three in a row earn ×2 treasure; six earn ×3. Each ring rewards you once per run.</p></div></div><div class="help-step"><span>05</span><div><h3>Crystal Rush</h3><p>Gems, coins, and clean swings charge a seven-second bonus: extra speed, double treasure, and protection. Traps fold away in the bonus stretch. No extra button.</p></div></div><div class="help-step"><span>06</span><div><h3>Crystal Flight</h3><p>Swing into the rare winged blue crystal. Fly head-first for 10 seconds: hold to rise and release to dive. A shield absorbs one hit during flight. When flight ends, hold to auto-grapple or choose a ring. The pickup activates immediately, even during Rush. Any remaining Rush time pauses and resumes after flight.</p></div></div><div class="help-step"><span>07</span><div><h3>A little room to find your swing</h3><p>The first 500 m have no obstacles. Rings and treasure are still there, so you can find your rhythm. After 500 m, watch for crimson crystal traps above and below. You still need to catch rings to avoid falling.</p></div></div><div class="help-step"><span>08</span><div><h3>A little guardian, three deliveries</h3><p>Bring the sapphire in Rook’s chest to the Sapphire Shrine at 10,000 m. He then carries a ruby to the Ruby Shrine at 20,000 m. The chest gem changes automatically; fly or swing through either destination. After both deliveries, the endless run continues. A new run starts with sapphire again.</p></div></div><p class="help-controls">Phone: hold a ring; drag to switch<br>Computer: hold left mouse on a ring; Space auto-grapples<br>Pause: Esc or P</p><button id="closeHelp" class="primary-button">LET'S SWING <span>↗</span></button></div></section>
 <div id="saveNotice" class="save-notice hidden" role="status">Saving is unavailable in this browser. You can still play.</div>
 <noscript><div class="noscript">Enable JavaScript to play Emily Game.</div></noscript>
-<script>/* Rook — Grapple Prototype 020. Original dependency-free canvas prototype.
+<script>/* Rook — Grapple Prototype 022. Original dependency-free canvas prototype.
    Art functions are isolated from physics so all visuals remain replaceable. */
 (() => {
 'use strict';
-const BUILD='020', STORAGE='rook.grapple.prototype.v1';
+const BUILD='022', STORAGE='rook.grapple.prototype.v1';
 const TEST=new URLSearchParams(location.search).has('test');
 const $=id=>document.getElementById(id);
 const canvas=$('world'), ctx=canvas.getContext('2d',{alpha:false});
@@ -1125,12 +1180,12 @@ function gemColors(type){return{
 function gem(g,x,y,r,type='sapphire',rot=0){
  const c=gemColors(type);g.save();g.translate(x,y);g.rotate(rot);
  if(type==='amethyst'){
-  poly(g,[[0,-r*.98],[-r*.34,-r*.56],[-r*.26,r*.02],[r*.24,r*.02],[r*.36,-r*.56]],c.mid,c.dark,1.4);
-  poly(g,[[0,-r*.98],[-r*.34,-r*.56],[-r*.26,r*.02],[-r*.06,-r*.15],[-r*.07,-r*.72]],c.light);
-  poly(g,[[0,-r*.98],[r*.36,-r*.56],[r*.24,r*.02],[r*.07,-r*.12],[r*.1,-r*.71]],c.dark);
-  poly(g,[[-r*.07,-r*.72],[0,-r*.98],[r*.1,-r*.71],[r*.07,-r*.12],[-r*.06,-r*.15]],c.mid);
-  g.strokeStyle='#ffffffb8';g.lineWidth=1;g.beginPath();g.moveTo(-r*.18,-r*.66);g.lineTo(r*.14,-r*.82);g.stroke();
-  star(g,r*.22,-r*.48,r*.16,.75,'#ffffff');
+  poly(g,[[0,-r*.98],[-r*.42,-r*.50],[-r*.26,r*.44],[0,r*.96],[r*.27,r*.44],[r*.43,-r*.50]],c.mid,c.dark,1.45);
+  poly(g,[[0,-r*.98],[-r*.42,-r*.50],[-r*.26,r*.44],[-r*.05,r*.08],[-r*.08,-r*.69]],c.light);
+  poly(g,[[0,-r*.98],[r*.43,-r*.50],[r*.27,r*.44],[r*.07,r*.1],[r*.1,-r*.69]],c.dark);
+  poly(g,[[-r*.08,-r*.69],[0,-r*.98],[r*.1,-r*.69],[r*.07,r*.1],[-r*.05,r*.08],[0,r*.96]],c.mid);
+  g.strokeStyle='#ffffffc8';g.lineWidth=1.05;g.beginPath();g.moveTo(-r*.16,-r*.62);g.lineTo(r*.16,-r*.82);g.stroke();
+  star(g,r*.18,-r*.36,r*.14,.72,'#ffffff');
  }else{
   poly(g,[[-r*.57,-r*.66],[r*.45,-r*.77],[r*.83,-r*.13],[0,r],[-r*.88,-r*.06]],c.mid,c.dark,1.5);
   poly(g,[[-r*.57,-r*.66],[r*.45,-r*.77],[r*.3,-r*.17],[-r*.35,-r*.11]],c.light);
@@ -1266,16 +1321,16 @@ function buildSceneryCache(){
    for(let x=-90+(Math.floor(y/78)%2)*90;x<w;x+=180){g.beginPath();g.moveTo(x,y);g.lineTo(x,y+78);g.stroke();}
   }
   for(let x=90;x<w;x+=270){
-   rr(g,x-68,142,136,494,64);g.fillStyle='#0c171f45';g.fill();g.strokeStyle='#7d709222';g.lineWidth=2;g.stroke();
+   rr(g,x-68,142,136,494,64);g.fillStyle='#16212745';g.fill();g.strokeStyle='#7d709222';g.lineWidth=2;g.stroke();
    rr(g,x-55,157,110,470,52);g.strokeStyle='#bba07614';g.lineWidth=1;g.stroke();
    poly(g,[[x-36,236],[x+12,223],[x+140,655],[x-45,655]],'#a4cfff05');
   }
  });
  const mid=make(1440,(g,w)=>{
-  const stone=g.createLinearGradient(0,0,0,680);stone.addColorStop(0,'#2c3a46');stone.addColorStop(.6,'#23313d');stone.addColorStop(1,'#1a252f');
+  const stone=g.createLinearGradient(0,0,0,680);stone.addColorStop(0,'#344147');stone.addColorStop(.6,'#28353b');stone.addColorStop(1,'#1b272d');
   function metal(x,y,width,height){const q=g.createLinearGradient(x,y,x+width,y);q.addColorStop(0,'#413739');q.addColorStop(.3,'#716049');q.addColorStop(.47,'#a58a56');q.addColorStop(.56,'#5c4c3e');q.addColorStop(1,'#302d35');return q;}
   function frame(cx){
-   rr(g,cx-177,149,354,495,150);g.fillStyle='#10202b99';g.fill();g.strokeStyle='#59493b';g.lineWidth=14;g.stroke();
+   rr(g,cx-177,149,354,495,150);g.fillStyle='#18262c99';g.fill();g.strokeStyle='#59493b';g.lineWidth=14;g.stroke();
    rr(g,cx-167,158,334,480,142);g.strokeStyle='#bd9b5944';g.lineWidth=2;g.stroke();
    rr(g,cx-155,168,310,456,134);g.strokeStyle='#73625039';g.lineWidth=1;g.stroke();
    for(let j=0;j<11;j++){
@@ -1298,7 +1353,7 @@ function buildSceneryCache(){
   // The central circular vault door establishes the room's scale.
   const cx=720,cy=413;
   ellipse(g,cx,cy,159,159,'#070e1c');
-  const door=g.createRadialGradient(cx-47,cy-60,8,cx,cy,161);door.addColorStop(0,'#54616c');door.addColorStop(.36,'#394754');door.addColorStop(1,'#1d2832');
+  const door=g.createRadialGradient(cx-47,cy-60,8,cx,cy,161);door.addColorStop(0,'#59656b');door.addColorStop(.36,'#3d4a50');door.addColorStop(1,'#212d33');
   ellipse(g,cx,cy,146,146,door);
   for(const [r,color,width] of [[154,'#957844',7],[141,'#c4a06144',2],[128,'#5f54444d',6],[103,'#c09d5b35',1]]){
    g.beginPath();g.arc(cx,cy,r,0,TAU);g.strokeStyle=color;g.lineWidth=width;g.stroke();
@@ -1328,7 +1383,7 @@ function buildSceneryCache(){
   // dimmer than playable anchors and traps.
   for(let x=0;x<w;x+=480){
    rr(g,x+2,132,58,523,5);g.fillStyle=metal(x+2,132,58,523);g.fill();
-   for(let j=0;j<3;j++){g.fillStyle='#17273344';g.fillRect(x+15+j*12,196,5,360);g.fillStyle='#c9aa652b';g.fillRect(x+16+j*12,196,1,360);}
+   for(let j=0;j<3;j++){g.fillStyle='#24343a44';g.fillRect(x+15+j*12,196,5,360);g.fillStyle='#c9aa652b';g.fillRect(x+16+j*12,196,1,360);}
    for(const y of [156,182,566,605]){rr(g,x-3,y,68,12,3);g.fillStyle='#776042';g.fill();g.fillStyle='#cfb17044';g.fillRect(x, y, 62,1);}
    poly(g,[[x+9,137],[x+53,137],[x+45,150],[x+17,150]],'#92754e66');
    // A blue jewel lantern is attached to the pillar, not a free pickup.
@@ -1358,7 +1413,7 @@ function drawSceneryTile(layer,cam,factor,alpha=1){
 }
 function backdrop(cam,t){
  ctx.setTransform(dpr,0,0,dpr,0,0);
- const bg=ctx.createLinearGradient(0,0,0,vh);bg.addColorStop(0,'#111a22');bg.addColorStop(.48,'#253543');bg.addColorStop(1,'#15212a');ctx.fillStyle=bg;ctx.fillRect(0,0,vw,vh);
+ const bg=ctx.createLinearGradient(0,0,0,vh);bg.addColorStop(0,'#141c20');bg.addColorStop(.48,'#2b3940');bg.addColorStop(1,'#182329');ctx.fillStyle=bg;ctx.fillRect(0,0,vw,vh);
  ctx.scale(scale,scale);ctx.translate(0,offsetY);
  const desired=clamp(scale*dpr,.8,1.5);
  if(!sceneryCache||Math.abs(sceneryCache.quality-desired)>.15)sceneryCache=buildSceneryCache();
@@ -1374,20 +1429,20 @@ function backdrop(cam,t){
   ctx.globalAlpha=1;
  }
  // An uninterrupted, bevelled ceiling rail grounds the anchor rings.
- ctx.fillStyle='#17232d';ctx.fillRect(0,-offsetY-5,viewW,108+offsetY);
+ ctx.fillStyle='#1b262c';ctx.fillRect(0,-offsetY-5,viewW,108+offsetY);
  const trim=ctx.createLinearGradient(0,99,0,134);trim.addColorStop(0,'#302d2e');trim.addColorStop(.25,'#87713e');trim.addColorStop(.43,'#c2a46c');trim.addColorStop(.50,'#5e4c32');trim.addColorStop(1,'#142133');ctx.fillStyle=trim;ctx.fillRect(0,103,viewW,30);
- ctx.fillStyle='#e9d39e70';ctx.fillRect(0,115,viewW,1);ctx.fillStyle='#12202b';ctx.fillRect(0,131,viewW,3);
+ ctx.fillStyle='#e9d39e70';ctx.fillRect(0,115,viewW,1);ctx.fillStyle='#1a252a';ctx.fillRect(0,131,viewW,3);
  for(let x=-mod(cam*.65,116);x<viewW;x+=116){
   rr(ctx,x,108,54,13,3);ctx.strokeStyle='#2b271f88';ctx.lineWidth=1;ctx.stroke();ellipse(ctx,x+7,113,1.7,1.7,'#e5c48266');ellipse(ctx,x+46,113,1.7,1.7,'#e5c48266');
  }
  drawSceneryTile(sceneryCache.near,cam,.44);
- ctx.fillStyle='#13202a';ctx.fillRect(0,680,viewW,viewH+offsetY);
+ ctx.fillStyle='#182329';ctx.fillRect(0,680,viewW,viewH+offsetY);
  ctx.fillStyle='#99845040';ctx.fillRect(0,675,viewW,3);ctx.fillStyle='#d9bc711a';ctx.fillRect(0,674,viewW,1);
  for(let x=-mod(cam*.66,175);x<viewW;x+=175){
   ctx.strokeStyle='#698db91b';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,679);ctx.lineTo(x-80,760);ctx.stroke();
  }
  ctx.fillStyle='#b2c8e60a';ctx.fillRect(0,702,viewW,1);
- const fade=ctx.createLinearGradient(0,644,0,742);fade.addColorStop(0,'#12202a00');fade.addColorStop(1,'#081118b0');ctx.fillStyle=fade;ctx.fillRect(0,644,viewW,110);
+ const fade=ctx.createLinearGradient(0,644,0,742);fade.addColorStop(0,'#18232900');fade.addColorStop(1,'#0d1519b0');ctx.fillStyle=fade;ctx.fillRect(0,644,viewW,110);
  if(rushBlend>.015){
   const glow=ctx.createLinearGradient(0,150,0,650);glow.addColorStop(0,'#86baff00');glow.addColorStop(.5,'#7cabff0c');glow.addColorStop(1,'#f6c34d1c');ctx.globalAlpha=rushBlend;ctx.fillStyle=glow;ctx.fillRect(0,134,viewW,539);ctx.globalAlpha=1;
  }
