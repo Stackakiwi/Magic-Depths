@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dfe3e7">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 031.">
+<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 033.">
 <title>Emily Game · Grapple Prototype 017</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2716%27%20fill%3D%27%2317192c%27%2F%3E%3Crect%20x%3D%2719%27%20y%3D%2732%27%20width%3D%2726%27%20height%3D%2727%27%20rx%3D%278%27%20fill%3D%27%23d8a747%27%2F%3E%3Cpath%20d%3D%27M32%2041L39%2046%2032%2055%2025%2046Z%27%20fill%3D%27%2366cfff%27%2F%3E%3Crect%20x%3D%2710%27%20y%3D%276%27%20width%3D%2744%27%20height%3D%2732%27%20rx%3D%2712%27%20fill%3D%27%23eaba4c%27%2F%3E%3Crect%20x%3D%2717%27%20y%3D%2715%27%20width%3D%2730%27%20height%3D%2716%27%20rx%3D%276%27%20fill%3D%27%23fff0c9%27%2F%3E%3Ccircle%20cx%3D%2725%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3Ccircle%20cx%3D%2739%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3C%2Fsvg%3E">
 <style>:root{color-scheme:dark;--ink:#101121;--gold:#efc464;--pale:#fff1c9;--muted:#a7a4b3;--blue:#8dd9ff;--border:rgba(237,194,100,.24)}
@@ -348,7 +348,7 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 </header>
  <div class="home-inner">
   <div class="hero-wrap"><canvas id="hero" width="700" height="680" aria-label="Rook, a tiny gold golem with a sapphire core and big golden hands"></canvas></div>
-  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>031</span></div>
+  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>033</span></div>
    <button id="play" class="primary-button" type="button" aria-label="Start"><span class="start-label">START</span></button>
    <button id="startPoint" class="start-point-button hidden" type="button" aria-label="Choose starting shrine">START FROM · BEGINNING</button>
    <p class="control-caption"><b>Hold a ring</b> to grapple. <b>Release</b> to swing.</p>
@@ -372,11 +372,11 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 <section id="storePanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="storeTitle"><div class="panel store-panel"><div class="store-heading"><div><div class="eyebrow">THE VAULT MARKET</div><h2 id="storeTitle">Gem Store</h2></div><button id="closeStore" class="store-close" type="button" aria-label="Close Gem Store">×</button></div><p class="store-intro">Spend banked Gold and the gems you collect during runs on permanent upgrades.</p><div id="storeBalances" class="store-balances" aria-label="Stored currencies"></div><div id="storeItems" class="store-items"></div></div></section>
 <div id="saveNotice" class="save-notice hidden" role="status">Saving is unavailable in this browser. You can still play.</div>
 <noscript><div class="noscript">Enable JavaScript to play Emily Game.</div></noscript>
-<script>/* Rook — Grapple Prototype 031. Original dependency-free canvas prototype.
+<script>/* Rook — Grapple Prototype 033. Original dependency-free canvas prototype.
    Art functions are isolated from physics so all visuals remain replaceable. */
 (() => {
 'use strict';
-const BUILD='031', STORAGE='rook.grapple.prototype.v1';
+const BUILD='033', STORAGE='rook.grapple.prototype.v1';
 const TEST=new URLSearchParams(location.search).has('test');
 const $=id=>document.getElementById(id);
 const canvas=$('world'), ctx=canvas.getContext('2d',{alpha:false});
@@ -609,7 +609,7 @@ function playDeathSound(){
   if(deathVoice===voice)deathVoice=null;
   source.disconnect();gain.disconnect();
  };
- try{source.start(soundCtx.currentTime);}catch(e){stopDeathSound();}
+ try{source.start(soundCtx.currentTime,Math.min(.5,Math.max(0,deathClipBuffer.duration-.01)));}catch(e){stopDeathSound();}
 }
 function tone(freq,duration=.1,type='sine',volume=.16,slide=0,delay=0){
  if(!save.sound||!soundCtx||soundCtx.state!=='running'||audioVoices>12)return;
