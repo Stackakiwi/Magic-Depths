@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dfe3e7">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 024.">
+<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 025.">
 <title>Emily Game · Grapple Prototype 017</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2716%27%20fill%3D%27%2317192c%27%2F%3E%3Crect%20x%3D%2719%27%20y%3D%2732%27%20width%3D%2726%27%20height%3D%2727%27%20rx%3D%278%27%20fill%3D%27%23d8a747%27%2F%3E%3Cpath%20d%3D%27M32%2041L39%2046%2032%2055%2025%2046Z%27%20fill%3D%27%2366cfff%27%2F%3E%3Crect%20x%3D%2710%27%20y%3D%276%27%20width%3D%2744%27%20height%3D%2732%27%20rx%3D%2712%27%20fill%3D%27%23eaba4c%27%2F%3E%3Crect%20x%3D%2717%27%20y%3D%2715%27%20width%3D%2730%27%20height%3D%2716%27%20rx%3D%276%27%20fill%3D%27%23fff0c9%27%2F%3E%3Ccircle%20cx%3D%2725%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3Ccircle%20cx%3D%2739%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3C%2Fsvg%3E">
 <style>:root{color-scheme:dark;--ink:#101121;--gold:#efc464;--pale:#fff1c9;--muted:#a7a4b3;--blue:#8dd9ff;--border:rgba(237,194,100,.24)}
@@ -315,7 +315,7 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 </header>
  <div class="home-inner">
   <div class="hero-wrap"><canvas id="hero" width="700" height="680" aria-label="Rook, a tiny gold golem with a sapphire core and big golden hands"></canvas></div>
-  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>024</span></div>
+  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>025</span></div>
    <button id="play" class="primary-button" type="button" aria-label="Start"><span class="start-label">START</span></button>
    <button id="startPoint" class="start-point-button hidden" type="button" aria-label="Choose starting shrine">START FROM · BEGINNING</button>
    <p class="control-caption"><b>Hold a ring</b> to grapple. <b>Release</b> to swing.</p>
@@ -335,14 +335,14 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 <div id="readyHint" class="ready-hint hidden"><span class="hold-symbol">◉</span><h2 id="readyTitle">Your first swing.</h2><p id="readyText">Hold any ring—even behind Rook.<br>Release to swing. Drag to another ring to switch.</p><span class="keyboard-hint">TOUCH · LEFT MOUSE · SPACE</span></div>
 <section id="pausePanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="pauseTitle"><div class="panel"><canvas class="panel-gem gem-icon" data-gem="sapphire" width="64" height="64" aria-hidden="true"></canvas><div class="eyebrow">TAKE YOUR TIME</div><h2 id="pauseTitle">Vault on pause.</h2><p>Your run is right where you left it.</p><button id="resume" class="primary-button">RESUME RUN <span>↗</span></button><button id="quit" class="text-button">End run &amp; bank treasure</button></div></section>
 <section id="overPanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="overTitle"><div class="panel result-panel"><div class="eyebrow" id="resultEyebrow">TREASURE SECURED</div><h2 id="overTitle">A brave little run.</h2><p id="deathReason" class="death-reason"></p><div class="result-distance"><span id="endDistance">0</span><small>METERS</small></div><div id="newBest" class="new-best hidden">✦ NEW PERSONAL BEST ✦</div><div class="result-stats"><div><small>GOLD BANKED</small><strong>+<span id="endGold">0</span></strong></div><div><small>CLEAN SWINGS</small><strong id="endSwings">0</strong></div></div><p id="endDelivery" class="end-delivery"></p><p id="endHighlights" class="end-highlights"></p><button id="replay" class="primary-button">RUN AGAIN <span>↗</span></button><button id="backHome" class="text-button">Back to vault</button></div></section>
-<section id="helpPanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel help-panel"><div class="eyebrow">ONE BUTTON. ALL MOMENTUM.</div><h2 id="helpTitle">Meet your next swing.</h2><div class="help-step"><span>01</span><div><h3>Choose any visible ring</h3><p>Hold on a grapple ring to choose it—even behind Rook or at the far edge of the screen. Hold empty space for the easy automatic option.</p></div></div><div class="help-step"><span>02</span><div><h3>Release to swing</h3><p>Let go to carry your momentum. Rook can swing backward too; the chain stays attached while you hold.</p></div></div><div class="help-step"><span>03</span><div><h3>Switch your anchor</h3><p>Release and hold another ring, or drag your held finger onto it. Gold and gems are treasure; red crystal traps are hazards.</p></div></div><div class="help-step"><span>04</span><div><h3>Find your rhythm</h3><p>Release during the lower sweep for a clean swing. Three in a row earn ×2 treasure; six earn ×3. Each ring rewards you once per run.</p></div></div><div class="help-step"><span>05</span><div><h3>Crystal Rush</h3><p>Gems, coins, and clean swings charge a seven-second bonus: extra speed, double treasure, and protection. Traps fold away in the bonus stretch. No extra button.</p></div></div><div class="help-step"><span>06</span><div><h3>Crystal Flight</h3><p>Swing into the rare winged blue crystal. Fly head-first for 10 seconds: hold to rise and release to dive. A shield absorbs one hit during flight. When flight ends, hold to auto-grapple or choose a ring. The pickup activates immediately, even during Rush. Any remaining Rush time pauses and resumes after flight.</p></div></div><div class="help-step"><span>07</span><div><h3>A little room to find your swing</h3><p>The first 500 m have no obstacles. Rings and treasure are still there, so you can find your rhythm. After 500 m, watch for crimson crystal traps above and below. You still need to catch rings to avoid falling.</p></div></div><div class="help-step"><span>08</span><div><h3>A little guardian, three deliveries</h3><p>Bring the sapphire in Rook’s chest to the Sapphire Shrine at 10,000 m. He then carries a ruby to the Ruby Shrine at 20,000 m. The chest gem changes automatically; fly or swing through either destination. After both deliveries, the endless run continues. A new run starts with sapphire again.</p></div></div><p class="help-controls">Phone: hold a ring; drag to switch<br>Computer: hold left mouse on a ring; Space auto-grapples<br>Pause: Esc or P</p><button id="closeHelp" class="primary-button">LET'S SWING <span>↗</span></button></div></section>
+<section id="helpPanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel help-panel"><div class="eyebrow">ONE BUTTON. ALL MOMENTUM.</div><h2 id="helpTitle">Meet your next swing.</h2><div class="help-step"><span>01</span><div><h3>Choose any visible ring</h3><p>Hold on a grapple ring to choose it—even behind Rook or at the far edge of the screen. Hold empty space for the easy automatic option.</p></div></div><div class="help-step"><span>02</span><div><h3>Release to swing</h3><p>Let go to carry your momentum. Rook can swing backward too; the chain stays attached while you hold.</p></div></div><div class="help-step"><span>03</span><div><h3>Switch your anchor</h3><p>Release and hold another ring, or drag your held finger onto it. Gold and gems are treasure; red crystal traps are hazards.</p></div></div><div class="help-step"><span>04</span><div><h3>Find your rhythm</h3><p>Release during the lower sweep for a clean swing. Three in a row earn ×2 treasure; six earn ×3. Each ring rewards you once per run.</p></div></div><div class="help-step"><span>05</span><div><h3>Crystal Rush</h3><p>Gems, coins, and clean swings charge a seven-second bonus: extra speed, double treasure, and protection. Traps fold away in the bonus stretch. No extra button.</p></div></div><div class="help-step"><span>06</span><div><h3>Crystal Flight</h3><p>Swing into the rare winged blue crystal. Fly head-first for 10 seconds: hold to rise and release to dive. A shield absorbs one hit during flight. When flight ends, hold to auto-grapple or choose a ring. The pickup activates immediately, even during Rush. Any remaining Rush time pauses and resumes after flight.</p></div></div><div class="help-step"><span>07</span><div><h3>A little room to find your swing</h3><p>The first 500 m have no obstacles. Rings and treasure are still there, so you can find your rhythm. After 500 m, watch for crimson crystal traps above and below. You still need to catch rings to avoid falling.</p></div></div><div class="help-step"><span>08</span><div><h3>A little guardian, four deliveries</h3><p>Bring Sapphire to 10,000 m, Ruby to 20,000 m, Emerald to 30,000 m, and Amethyst to 40,000 m. Rook’s chest gem changes automatically after each delivery. Once a shrine is unlocked, the Home Screen can start a future run directly on that shrine’s landing deck.</p></div></div><p class="help-controls">Phone: hold a ring; drag to switch<br>Computer: hold left mouse on a ring; Space auto-grapples<br>Pause: Esc or P</p><button id="closeHelp" class="primary-button">LET'S SWING <span>↗</span></button></div></section>
 <div id="saveNotice" class="save-notice hidden" role="status">Saving is unavailable in this browser. You can still play.</div>
 <noscript><div class="noscript">Enable JavaScript to play Emily Game.</div></noscript>
-<script>/* Rook — Grapple Prototype 024. Original dependency-free canvas prototype.
+<script>/* Rook — Grapple Prototype 025. Original dependency-free canvas prototype.
    Art functions are isolated from physics so all visuals remain replaceable. */
 (() => {
 'use strict';
-const BUILD='024', STORAGE='rook.grapple.prototype.v1';
+const BUILD='025', STORAGE='rook.grapple.prototype.v1';
 const TEST=new URLSearchParams(location.search).has('test');
 const $=id=>document.getElementById(id);
 const canvas=$('world'), ctx=canvas.getContext('2d',{alpha:false});
@@ -350,6 +350,7 @@ const hero=$('hero'), heroCtx=hero.getContext('2d');
 const TAU=Math.PI*2, DT=1/120;
 const ROOK_SCALE=.56*.98; // Exactly 98% of the original 001/002 in-game scale.
 const START_PLATFORM=Object.freeze({left:-1000000,right:234,top:488,bottom:1000000});
+const SHRINE_PLATFORM=Object.freeze({halfWidth:148,top:620,bottom:1000000});
 const START_X=175, ROOK_FOOT_OFFSET=74.25*ROOK_SCALE;
 const ENTRY_SPEED=420, ENTRY_BRAKE_DISTANCE=58;
 let departure={phase:'none',time:0,elapsed:0,startX:0,duration:0,cruise:0};
@@ -399,7 +400,7 @@ let suspendedRush=null,death=null;
 let flightRng,flightLastSpawnM=-Infinity;
 let homeSceneCache=null,startPending=false,startTimer=0;
 let delivered=0,deliveryGlow=0,deliveryFx=null;
-let runStartX=START_X,runObstacleStartX=OBSTACLE_START_X;
+let runStartX=START_X,runObstacleStartX=OBSTACLE_START_X,runStartIndex=0;
 const palette={gold:'#eabb54',pale:'#fff1bb',sapphire:'#38aef5',ink:'#12152a',red:'#f05d77'};
 const defaults={version:2,best:0,gold:0,runs:0,bestSwings:0,sound:true,unlockedStart:0,startChoice:0};
 let save={...defaults};
@@ -553,7 +554,10 @@ function resize(){
  accumulator=0;
 }
 function playerScreenX(){return Math.min(330,viewW*.265);}
-function activeStartPlatform(){const shift=runStartX-START_X;return {left:START_PLATFORM.left+shift,right:START_PLATFORM.right+shift,top:START_PLATFORM.top,bottom:START_PLATFORM.bottom};}
+function activeStartPlatform(){
+ if(runStartIndex>0)return {left:runStartX-SHRINE_PLATFORM.halfWidth,right:runStartX+SHRINE_PLATFORM.halfWidth,top:SHRINE_PLATFORM.top,bottom:SHRINE_PLATFORM.bottom};
+ const shift=runStartX-START_X;return {left:START_PLATFORM.left+shift,right:START_PLATFORM.right+shift,top:START_PLATFORM.top,bottom:START_PLATFORM.bottom};
+}
 /* speed is implemented in the 006 gameplay section below. */
 
 /* buildUntil is implemented in the 006 gameplay section below. */
@@ -563,11 +567,13 @@ function startRun(testSeed,startAt=selectedStart){
  seed=(testSeed===undefined?(Math.random()*4294967295)>>>0:testSeed>>>0);rng=seeded(seed);
  anchors=[];obstacles=[];pickups=[];particles=[];labels=[];
  startAt=clamp(Math.floor(startAt||0),0,save.unlockedStart);
+ runStartIndex=startAt;
  const startMetres=startAt>0?DELIVERIES[startAt-1].metres:0;
  const startX=START_X+startMetres*10;
  runStartX=startX;runObstacleStartX=startX+OBSTACLE_START_DISTANCE*10;
- nextAnchorX=startAt>0?startX+155:330;anchorId=startAt*1000;segmentIndex=startAt*1000;generationX=nextAnchorX;
- p={x:startX,y:START_PLATFORM.top-ROOK_FOOT_OFFSET,vx:0,vy:0,r:19*.98,rope:null,angle:0,grounded:true};
+ nextAnchorX=startAt>0?startX+195:330;anchorId=startAt*1000;segmentIndex=startAt*1000;generationX=nextAnchorX;
+ const startLedge=activeStartPlatform();
+ p={x:startX,y:startLedge.top-ROOK_FOOT_OFFSET,vx:0,vy:0,r:19*.98,rope:null,angle:0,grounded:true};
  runTime=0;runGold=0;distance=startMetres;cleanSwings=0;combo=0;nextMilestone=Math.max(250,Math.ceil((startMetres+250)/250)*250);totalCollected=0;
  banked=false;bestThisRun=false;fallRotation=0;lastRopeId=-1;held=false;keyHolding=false;pointer=null;shieldTime=0;lastCoinTone=-10;
  inputMode='auto';hoverPoint=null;dragOrigin=null;
@@ -580,11 +586,16 @@ function startRun(testSeed,startAt=selectedStart){
  delivered=startAt;deliveryGlow=0;deliveryFx=null;
  camera=p.x-playerScreenX();buildUntil(camera+viewW+1050);
  mode='ready';readyType='start';accumulator=0;toastLife=0;
- const entryX=camera-60,travel=runStartX-entryX;
- const brake=Math.min(ENTRY_BRAKE_DISTANCE,travel*.4),cruise=(travel-brake)/ENTRY_SPEED;
- departure={phase:'entering',time:0,elapsed:0,startX:entryX,cruise,brakeTime:2*brake/ENTRY_SPEED,duration:cruise+2*brake/ENTRY_SPEED};
- p.x=entryX;p.vx=ENTRY_SPEED;
- show($('home'),false);show($('homeTop'),false);show($('hud'),true);show($('status'),true);show($('readyHint'),false);
+ if(startAt>0){
+  departure={phase:'waiting',time:0,elapsed:0,startX:runStartX,cruise:0,brakeTime:0,duration:0};
+  p.x=runStartX;p.vx=0;p.y=startLedge.top-ROOK_FOOT_OFFSET;p.grounded=true;
+ }else{
+  const entryX=camera-60,travel=runStartX-entryX;
+  const brake=Math.min(ENTRY_BRAKE_DISTANCE,travel*.4),cruise=(travel-brake)/ENTRY_SPEED;
+  departure={phase:'entering',time:0,elapsed:0,startX:entryX,cruise,brakeTime:2*brake/ENTRY_SPEED,duration:cruise+2*brake/ENTRY_SPEED};
+  p.x=entryX;p.vx=ENTRY_SPEED;
+ }
+ show($('home'),false);show($('homeTop'),false);show($('hud'),true);show($('status'),true);show($('readyHint'),startAt>0);
  for(const id of ['overPanel','pausePanel','helpPanel','runToast'])show($(id),false);
  setDepartureHint();
  updateHUD();updateStatus();
@@ -609,7 +620,7 @@ function updateDeparture(dt){
   p.x=departure.startX+ENTRY_SPEED*departure.cruise+ENTRY_SPEED*t-.5*a*t*t;
   p.vx=Math.max(0,ENTRY_SPEED-a*t);
  }
- p.y=START_PLATFORM.top-ROOK_FOOT_OFFSET;p.vy=0;p.angle=0;p.grounded=true;
+ const ledge=activeStartPlatform();p.y=ledge.top-ROOK_FOOT_OFFSET;p.vy=0;p.angle=0;p.grounded=true;
  if(elapsed>=departure.duration){
   p.x=runStartX;p.vx=0;departure.phase='waiting';
   show($('readyHint'),true);setDepartureHint();updateStatus();
@@ -772,7 +783,7 @@ function completeFinish(reason,quit=false){
 }
 function toHome(){
  stopDeathSound();cancelStartPress();setHomeChrome(true);homeSceneCache=null;
- delivered=0;deliveryGlow=0;deliveryFx=null;runStartX=START_X;runObstacleStartX=OBSTACLE_START_X;
+ delivered=0;deliveryGlow=0;deliveryFx=null;runStartX=START_X;runObstacleStartX=OBSTACLE_START_X;runStartIndex=0;
  if(mode==='playing'||mode==='ready'||mode==='paused')bank();
  mode='home';held=false;keyHolding=false;pointer=null;hoverPoint=null;dragOrigin=null;particles=[];labels=[];trail=[];rushTime=0;rushBlend=0;flightTime=0;flightShield=0;suspendedRush=null;death=null;accumulator=0;
  $('pauseButton').disabled=false;
@@ -821,15 +832,16 @@ function addPickup(x,y,type='coin',bonus=false){
 }
 function buildUntil(limit){
  while(nextAnchorX<limit){
-  const id=anchorId++,slot=id%4;
-  if(id>=8&&slot===0){
+  const id=anchorId++,localId=runStartIndex>0?id-runStartIndex*1000:id,slot=((localId%4)+4)%4;
+  if(localId>=8&&slot===0){
    const pool=PATTERNS.length;
    let choice=Math.floor(rng()*pool);
    if(choice===patternIndex)choice=(choice+1+Math.floor(rng()*(pool-1)))%pool;
    patternIndex=choice;
   }
-  const pattern=PATTERNS[id<8?0:patternIndex];
-  const a={id,x:nextAnchorX,y:id<3?[165,175,155][id]:pattern.heights[slot]+(rng()-.5)*12,pattern:id<8?0:patternIndex,rewardedSwing:false};
+  const pattern=PATTERNS[localId<8?0:patternIndex];
+  const firstHeights=runStartIndex>0?[205,190,180]:[165,175,155];
+  const a={id,x:nextAnchorX,y:localId<3?firstHeights[localId]:pattern.heights[slot]+(rng()-.5)*12,pattern:localId<8?0:patternIndex,rewardedSwing:false};
   const m=(a.x-175)/10;
   const prev=anchors[anchors.length-1];anchors.push(a);
   if(prev){
@@ -838,10 +850,10 @@ function buildUntil(limit){
     addPickup(lerp(prev.x,a.x,f),pattern.lane+Math.sin(f*Math.PI)*pattern.depth);
    }
    const pickupPool=m>=2000?['sapphire','emerald','ruby','amethyst']:['sapphire','emerald','ruby'];
-   if(id%3===0)addPickup(a.x-28,pattern.lane-48,pickupPool[Math.floor(id/3)%pickupPool.length]);
-   if(id%11===0)addPickup(a.x+70,pattern.lane-24,'diamond');
+   if(localId%3===0)addPickup(a.x-28,pattern.lane-48,pickupPool[Math.floor(Math.max(0,localId)/3)%pickupPool.length]);
+   if(localId%11===0)addPickup(a.x+70,pattern.lane-24,'diamond');
    // A higher optional cache can be revisited with a rearward grapple.
-   if(id>=8&&patternIndex===4&&slot===2){
+   if(localId>=8&&patternIndex===4&&slot===2){
     addPickup(a.x-152,313,m>=2000?'amethyst':'emerald');addPickup(a.x-105,295,'diamond');addPickup(a.x-58,313,'sapphire');
    }
   }
@@ -1740,41 +1752,48 @@ function drawChain(t){
 function drawDestinations(t){
  for(let i=0;i<DELIVERIES.length;i++){
   const d=DELIVERIES[i],x=destinationX(d)-camera;
-  if(x<-270||x>viewW+270)continue;
+  if(x<-240||x>viewW+240)continue;
   const c=gemColors(d.gem),complete=delivered>i,glow=complete&&deliveryFx&&deliveryFx.index===i?deliveryGlow/2.4:0;
+  const activeCheckpoint=runStartIndex>0&&i===runStartIndex-1;
   ctx.save();ctx.translate(x,0);
-  // A background shrine, not a new obstacle or a grapple target. No collision.
-  const halo=ctx.createRadialGradient(0,468,8,0,468,184);
-  halo.addColorStop(0,c.mid+(glow>.1?'36':'18'));halo.addColorStop(1,c.mid+'00');ctx.fillStyle=halo;ctx.fillRect(-184,284,368,368);
+  // Clear shrine composition: display above, open center for Rook, landing deck below.
+  const halo=ctx.createRadialGradient(0,452,8,0,452,172);
+  halo.addColorStop(0,c.mid+(glow>.1?'38':'18'));halo.addColorStop(1,c.mid+'00');ctx.fillStyle=halo;ctx.fillRect(-175,270,350,360);
   for(const side of [-1,1]){
-   const sx=side*106;
-   rr(ctx,sx-12,327,24,310,5);ctx.fillStyle='#1b253a';ctx.fill();ctx.strokeStyle='#a98749';ctx.lineWidth=2;ctx.stroke();
-   ctx.fillStyle='#c4a561';ctx.fillRect(sx-8,337,3,287);ctx.fillStyle='#574839';ctx.fillRect(sx+5,337,3,287);
-   rr(ctx,sx-22,621,44,16,3);ctx.fillStyle=goldGrad(ctx,sx-22,621,44,16);ctx.fill();
-   gem(ctx,sx,338,17,d.gem);
+   const sx=side*112;
+   rr(ctx,sx-10,342,20,278,4);ctx.fillStyle='#263744';ctx.fill();ctx.strokeStyle='#a98749';ctx.lineWidth=2;ctx.stroke();
+   ctx.fillStyle='#c4a561';ctx.fillRect(sx-6,350,2.5,260);ctx.fillStyle='#6c5a42';ctx.fillRect(sx+4,350,2,260);
+   rr(ctx,sx-20,607,40,13,3);ctx.fillStyle=goldGrad(ctx,sx-20,607,40,13);ctx.fill();
+   gem(ctx,sx,355,15,d.gem);
   }
-  ctx.strokeStyle='#8b754c';ctx.lineWidth=8;ctx.beginPath();ctx.moveTo(-106,353);ctx.quadraticCurveTo(0,246,106,353);ctx.stroke();
-  ctx.strokeStyle='#efcf895c';ctx.lineWidth=2;ctx.stroke();
-  rr(ctx,-145,630,290,22,7);ctx.fillStyle=goldGrad(ctx,-145,630,290,22);ctx.fill();
-  rr(ctx,-65,596,130,33,6);ctx.fillStyle='#272c3e';ctx.fill();ctx.strokeStyle='#d2ac63';ctx.lineWidth=2;ctx.stroke();
-  poly(ctx,[[-48,596],[-28,560],[28,560],[48,596]],'#35405b','#bc9855',2);
-  poly(ctx,[[0,452],[39,485],[0,530],[-39,485]],'#101d31','#d2b474',3);
-  if(complete)gem(ctx,0,486,30,d.gem);
-  else{ctx.strokeStyle=c.mid+'88';ctx.lineWidth=1.5;ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(0,464);ctx.lineTo(24,485);ctx.lineTo(0,516);ctx.lineTo(-24,485);ctx.closePath();ctx.stroke();ctx.setLineDash([]);}
-  ctx.font='700 13px -apple-system,sans-serif';ctx.textAlign='center';ctx.fillStyle='#eeddb3';ctx.lineWidth=4;ctx.strokeStyle='#11182b';ctx.strokeText(d.destination,0,284);ctx.fillText(d.destination,0,284);
-  ctx.font='700 10px -apple-system,sans-serif';ctx.fillStyle=c.light;ctx.fillText(complete?'DELIVERED':fmt(d.metres)+' m · GEM DELIVERY',0,304);
-  if(complete&&!reducedMotion){star(ctx,-28,480,4,glow*.7,c.light);star(ctx,28,506,4,glow*.7,c.light);}
+  // Arch remains above Rook's launch area.
+  ctx.strokeStyle='#8b754c';ctx.lineWidth=7;ctx.beginPath();ctx.moveTo(-112,372);ctx.quadraticCurveTo(0,272,112,372);ctx.stroke();
+  ctx.strokeStyle='#efcf895c';ctx.lineWidth=1.6;ctx.stroke();
+  // Gem socket is high enough to never overlap Rook when this shrine is a checkpoint.
+  poly(ctx,[[0,408],[34,440],[0,480],[-34,440]],'#162632','#d2b474',2.5);
+  if(complete)gem(ctx,0,440,27,d.gem);
+  else{ctx.strokeStyle=c.mid+'88';ctx.lineWidth=1.5;ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(0,418);ctx.lineTo(22,440);ctx.lineTo(0,468);ctx.lineTo(-22,440);ctx.closePath();ctx.stroke();ctx.setLineDash([]);}
+  // Physical-looking landing deck; it is actually solid only for the selected checkpoint start.
+  rr(ctx,-SHRINE_PLATFORM.halfWidth,SHRINE_PLATFORM.top,SHRINE_PLATFORM.halfWidth*2,28,5);ctx.fillStyle=goldGrad(ctx,-SHRINE_PLATFORM.halfWidth,SHRINE_PLATFORM.top,SHRINE_PLATFORM.halfWidth*2,28);ctx.fill();ctx.strokeStyle='#684b2d';ctx.lineWidth=2;ctx.stroke();
+  ctx.fillStyle='#fff0bcaa';ctx.fillRect(-SHRINE_PLATFORM.halfWidth+6,SHRINE_PLATFORM.top+3,SHRINE_PLATFORM.halfWidth*2-12,2);
+  // Front plaque stays below Rook's feet, never through his body.
+  rr(ctx,-64,638,128,28,4);ctx.fillStyle='#24343f';ctx.fill();ctx.strokeStyle='#a88a50';ctx.lineWidth=1.5;ctx.stroke();
+  gem(ctx,0,652,9,d.gem);
+  ctx.font='700 13px -apple-system,sans-serif';ctx.textAlign='center';ctx.fillStyle='#eeddb3';ctx.lineWidth=4;ctx.strokeStyle='#11182b';ctx.strokeText(d.destination,0,292);ctx.fillText(d.destination,0,292);
+  ctx.font='700 10px -apple-system,sans-serif';ctx.fillStyle=c.light;ctx.fillText(activeCheckpoint?'CHECKPOINT START':complete?'DELIVERED':fmt(d.metres)+' m · GEM DELIVERY',0,312);
+  if(complete&&!reducedMotion){star(ctx,-31,444,4,glow*.7,c.light);star(ctx,31,462,4,glow*.7,c.light);}
   ctx.restore();
  }
 }
 function drawDeliveryTransfer(){
  if(!deliveryFx||reducedMotion)return;
  const f=deliveryFx,d=DELIVERIES[f.index],k=clamp(1-f.life/1.6,0,1),ease=1-(1-k)**3;
- const x=lerp(f.fromX,destinationX(d),ease),y=lerp(f.fromY,486,ease)-Math.sin(k*Math.PI)*38;
+ const x=lerp(f.fromX,destinationX(d),ease),y=lerp(f.fromY,440,ease)-Math.sin(k*Math.PI)*38;
  ctx.save();ctx.globalAlpha=Math.min(1,f.life*2.5);gem(ctx,x-camera,y,13,d.gem);ctx.restore();
 }
 
 function drawStartPlatform(){
+ if(runStartIndex>0)return;
  const ledge=activeStartPlatform(),right=ledge.right-camera;
  if(right<-2||ledge.left-camera>viewW)return;
  const left=Math.max(ledge.left-camera,-64),top=ledge.top;
@@ -1944,7 +1963,7 @@ if(TEST){
   start:(s=12345)=>startRun(s),
   press,lift,pause,resume,toHome,
   step:(seconds)=>{for(let i=0;i<Math.round(seconds/DT);i++)update(DT);render(visualTime);updateHUD();return mode;},
-  snapshot:()=>({mode,death:death?{...death,bottom:deathBottom(),padding:DEATH_PADDING}:null,rookPose:p?currentRookPose():null,departure:{...departure},seed,runTime,distance,delivery:{completed:delivered,gem:carriedGem(),target:delivered<DELIVERIES.length?DELIVERIES[delivered].metres:null,glow:deliveryGlow},gold:runGold,cleanSwings,combo,bestCombo,held,banked,rush:{charge:rushCharge,time:rushTime,blend:rushBlend,pending:rushPending,count:rushCount,grace:rushGrace,cooldown:rushCooldown,zones:rushZones.map(z=>({...z}))},multiplier:treasureMultiplier(),speed:speed(),patternIndex,save:{...save},viewport:{vw,vh,scale,viewW,offsetY},flight:{time:flightTime,shield:flightShield,queued:false,suspendedRush:suspendedRush?{...suspendedRush}:null,count:flightCount,recovery:flightRecovery},opening:{clear:openingClear(),metres:OBSTACLE_START_DISTANCE},p:p?{x:p.x,y:p.y,vx:p.vx,vy:p.vy,r:p.r,angle:p.angle,grounded:p.grounded,rope:p.rope?{id:p.rope.a.id,angle:p.rope.angle,omega:p.rope.omega,length:p.rope.length,manual:p.rope.manual,age:p.rope.age}:null}:null,camera,inputMode,candidate:candidate(),anchors:anchors.map(a=>({...a,visible:anchorVisible(a),screenX:(a.x-camera)*scale,screenY:(a.y+offsetY)*scale})),counts:{anchors:anchors.length,obstacles:obstacles.length,pickups:pickups.length,particles:particles.length,trail:trail.length,rushZones:rushZones.length},pickups:pickups.map(c=>({...c})),obstacles:obstacles.map(o=>({...o,liveY:o.type==='saw'?sawY(o):o.y}))}),
+  snapshot:()=>({mode,death:death?{...death,bottom:deathBottom(),padding:DEATH_PADDING}:null,rookPose:p?currentRookPose():null,departure:{...departure},seed,runTime,distance,delivery:{completed:delivered,gem:carriedGem(),target:delivered<DELIVERIES.length?DELIVERIES[delivered].metres:null,glow:deliveryGlow},gold:runGold,cleanSwings,combo,bestCombo,held,banked,rush:{charge:rushCharge,time:rushTime,blend:rushBlend,pending:rushPending,count:rushCount,grace:rushGrace,cooldown:rushCooldown,zones:rushZones.map(z=>({...z}))},multiplier:treasureMultiplier(),speed:speed(),patternIndex,save:{...save},viewport:{vw,vh,scale,viewW,offsetY},flight:{time:flightTime,shield:flightShield,queued:false,suspendedRush:suspendedRush?{...suspendedRush}:null,count:flightCount,recovery:flightRecovery},opening:{clear:openingClear(),metres:OBSTACLE_START_DISTANCE,startIndex:runStartIndex,startPlatform:activeStartPlatform()},p:p?{x:p.x,y:p.y,vx:p.vx,vy:p.vy,r:p.r,angle:p.angle,grounded:p.grounded,rope:p.rope?{id:p.rope.a.id,angle:p.rope.angle,omega:p.rope.omega,length:p.rope.length,manual:p.rope.manual,age:p.rope.age}:null}:null,camera,inputMode,candidate:candidate(),anchors:anchors.map(a=>({...a,visible:anchorVisible(a),screenX:(a.x-camera)*scale,screenY:(a.y+offsetY)*scale})),counts:{anchors:anchors.length,obstacles:obstacles.length,pickups:pickups.length,particles:particles.length,trail:trail.length,rushZones:rushZones.length},pickups:pickups.map(c=>({...c})),obstacles:obstacles.map(o=>({...o,liveY:o.type==='saw'?sawY(o):o.y}))}),
   setPlayer:(values)=>Object.assign(p,values),
   finish:(why='Test complete',quit=false)=>finish(why,quit),
   jumpPickup:()=>{const c=pickups.find(c=>!c.taken&&c.x>p.x);if(c){p.x=c.x;p.y=c.y-5;p.rope=null;}},
