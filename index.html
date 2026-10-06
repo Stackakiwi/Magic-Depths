@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dfe3e7">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 022.">
+<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 023.">
 <title>Emily Game · Grapple Prototype 017</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2716%27%20fill%3D%27%2317192c%27%2F%3E%3Crect%20x%3D%2719%27%20y%3D%2732%27%20width%3D%2726%27%20height%3D%2727%27%20rx%3D%278%27%20fill%3D%27%23d8a747%27%2F%3E%3Cpath%20d%3D%27M32%2041L39%2046%2032%2055%2025%2046Z%27%20fill%3D%27%2366cfff%27%2F%3E%3Crect%20x%3D%2710%27%20y%3D%276%27%20width%3D%2744%27%20height%3D%2732%27%20rx%3D%2712%27%20fill%3D%27%23eaba4c%27%2F%3E%3Crect%20x%3D%2717%27%20y%3D%2715%27%20width%3D%2730%27%20height%3D%2716%27%20rx%3D%276%27%20fill%3D%27%23fff0c9%27%2F%3E%3Ccircle%20cx%3D%2725%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3Ccircle%20cx%3D%2739%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3C%2Fsvg%3E">
 <style>:root{color-scheme:dark;--ink:#101121;--gold:#efc464;--pale:#fff1c9;--muted:#a7a4b3;--blue:#8dd9ff;--border:rgba(237,194,100,.24)}
@@ -213,7 +213,7 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
  justify-items:center;align-items:start;align-self:center}
 #home .home-menu-slot .home-copy{align-self:start;transform:translateX(var(--menu-offset-x,0px))}
 
-.start-point-button{width:100%;min-height:38px;margin-top:10px;border:1px solid #8f9aa450;border-radius:9px;background:linear-gradient(180deg,#d8dde2 0%,#bcc4cc 50%,#d2d8de 100%);color:#49545e;font-size:10px;font-weight:700;letter-spacing:1.4px;box-shadow:inset 0 1px 0 #fafdff,0 2px 0 #88919a55;transition:filter .15s,color .15s,border-color .15s}.start-point-button:hover{filter:brightness(1.03);color:#2e3942;border-color:#b0bac350}.start-point-button:active{transform:translateY(2px);box-shadow:inset 0 1px 0 #fafdff,0 1px 0 #88919a55}@media(max-width:720px) and (orientation:portrait){.start-point-button{min-height:36px;font-size:9px;margin-top:8px}}@media(max-height:520px) and (orientation:landscape){.start-point-button{min-height:31px;font-size:8px;margin-top:7px}}
+.start-point-button{width:100%;min-height:38px;margin-top:10px;border:1px solid #8f9aa450;border-radius:9px;background:linear-gradient(180deg,#d8dde2 0%,#bcc4cc 50%,#d2d8de 100%);color:#49545e;font-size:10px;font-weight:700;letter-spacing:1.4px;box-shadow:inset 0 1px 0 #fafdff,0 2px 0 #88919a55;transition:filter .15s,color .15s,border-color .15s}.start-point-button:hover{filter:brightness(1.03);color:#2e3942;border-color:#b0bac350}.start-point-button .start-choice-sapphire{color:#218fe3;font-weight:850;text-shadow:0 1px 0 #ffffff99}.start-point-button:active{transform:translateY(2px);box-shadow:inset 0 1px 0 #fafdff,0 1px 0 #88919a55}@media(max-width:720px) and (orientation:portrait){.start-point-button{min-height:36px;font-size:9px;margin-top:8px}}@media(max-height:520px) and (orientation:landscape){.start-point-button{min-height:31px;font-size:8px;margin-top:7px}}
 
 /* 021: compact four-delivery strip; all gems and labels use one size. */
 #home .home-footer{
@@ -281,7 +281,7 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 </header>
  <div class="home-inner">
   <div class="hero-wrap"><canvas id="hero" width="700" height="680" aria-label="Rook, a tiny gold golem with a sapphire core and big golden hands"></canvas></div>
-  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>022</span></div>
+  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>023</span></div>
    <button id="play" class="primary-button" type="button" aria-label="Start"><span class="start-label">START</span></button>
    <button id="startPoint" class="start-point-button hidden" type="button" aria-label="Choose starting shrine">START FROM · BEGINNING</button>
    <p class="control-caption"><b>Hold a ring</b> to grapple. <b>Release</b> to swing.</p>
@@ -304,11 +304,11 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 <section id="helpPanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel help-panel"><div class="eyebrow">ONE BUTTON. ALL MOMENTUM.</div><h2 id="helpTitle">Meet your next swing.</h2><div class="help-step"><span>01</span><div><h3>Choose any visible ring</h3><p>Hold on a grapple ring to choose it—even behind Rook or at the far edge of the screen. Hold empty space for the easy automatic option.</p></div></div><div class="help-step"><span>02</span><div><h3>Release to swing</h3><p>Let go to carry your momentum. Rook can swing backward too; the chain stays attached while you hold.</p></div></div><div class="help-step"><span>03</span><div><h3>Switch your anchor</h3><p>Release and hold another ring, or drag your held finger onto it. Gold and gems are treasure; red crystal traps are hazards.</p></div></div><div class="help-step"><span>04</span><div><h3>Find your rhythm</h3><p>Release during the lower sweep for a clean swing. Three in a row earn ×2 treasure; six earn ×3. Each ring rewards you once per run.</p></div></div><div class="help-step"><span>05</span><div><h3>Crystal Rush</h3><p>Gems, coins, and clean swings charge a seven-second bonus: extra speed, double treasure, and protection. Traps fold away in the bonus stretch. No extra button.</p></div></div><div class="help-step"><span>06</span><div><h3>Crystal Flight</h3><p>Swing into the rare winged blue crystal. Fly head-first for 10 seconds: hold to rise and release to dive. A shield absorbs one hit during flight. When flight ends, hold to auto-grapple or choose a ring. The pickup activates immediately, even during Rush. Any remaining Rush time pauses and resumes after flight.</p></div></div><div class="help-step"><span>07</span><div><h3>A little room to find your swing</h3><p>The first 500 m have no obstacles. Rings and treasure are still there, so you can find your rhythm. After 500 m, watch for crimson crystal traps above and below. You still need to catch rings to avoid falling.</p></div></div><div class="help-step"><span>08</span><div><h3>A little guardian, three deliveries</h3><p>Bring the sapphire in Rook’s chest to the Sapphire Shrine at 10,000 m. He then carries a ruby to the Ruby Shrine at 20,000 m. The chest gem changes automatically; fly or swing through either destination. After both deliveries, the endless run continues. A new run starts with sapphire again.</p></div></div><p class="help-controls">Phone: hold a ring; drag to switch<br>Computer: hold left mouse on a ring; Space auto-grapples<br>Pause: Esc or P</p><button id="closeHelp" class="primary-button">LET'S SWING <span>↗</span></button></div></section>
 <div id="saveNotice" class="save-notice hidden" role="status">Saving is unavailable in this browser. You can still play.</div>
 <noscript><div class="noscript">Enable JavaScript to play Emily Game.</div></noscript>
-<script>/* Rook — Grapple Prototype 022. Original dependency-free canvas prototype.
+<script>/* Rook — Grapple Prototype 023. Original dependency-free canvas prototype.
    Art functions are isolated from physics so all visuals remain replaceable. */
 (() => {
 'use strict';
-const BUILD='022', STORAGE='rook.grapple.prototype.v1';
+const BUILD='023', STORAGE='rook.grapple.prototype.v1';
 const TEST=new URLSearchParams(location.search).has('test');
 const $=id=>document.getElementById(id);
 const canvas=$('world'), ctx=canvas.getContext('2d',{alpha:false});
@@ -365,6 +365,7 @@ let suspendedRush=null,death=null;
 let flightRng,flightLastSpawnM=-Infinity;
 let homeSceneCache=null,startPending=false,startTimer=0;
 let delivered=0,deliveryGlow=0,deliveryFx=null;
+let runStartX=START_X,runObstacleStartX=OBSTACLE_START_X;
 const palette={gold:'#eabb54',pale:'#fff1bb',sapphire:'#38aef5',ink:'#12152a',red:'#f05d77'};
 const defaults={version:2,best:0,gold:0,runs:0,bestSwings:0,sound:true,unlockedStart:0,startChoice:0};
 let save={...defaults};
@@ -438,7 +439,7 @@ function fitHomeMenu(){
 }
 function startChoiceLabel(i){return i<=0?'BEGINNING':DELIVERIES[i-1].name.replace(' Shrine','').toUpperCase();}
 function nextDeliveryLabel(done){return done>=DELIVERIES.length?'FREE EXPLORE':DELIVERIES[done].name.replace(' Shrine','').toUpperCase()+' · '+fmt(DELIVERIES[done].metres)+' m';}
-function syncStartChoice(){selectedStart=clamp(Math.floor(selectedStart),0,save.unlockedStart);const b=$('startPoint');if(!b)return;show(b,save.unlockedStart>0);b.textContent='START FROM · '+startChoiceLabel(selectedStart);b.setAttribute('aria-label','Choose starting shrine. Current selection: '+startChoiceLabel(selectedStart));}
+function syncStartChoice(){selectedStart=clamp(Math.floor(selectedStart),0,save.unlockedStart);const b=$('startPoint');if(!b)return;show(b,save.unlockedStart>0);const label=startChoiceLabel(selectedStart);b.innerHTML='START FROM · '+(label==='SAPPHIRE'?'<span class="start-choice-sapphire">SAPPHIRE</span>':label);b.setAttribute('aria-label','Choose starting shrine. Current selection: '+label);}
 function refreshHome(){ selectedStart=clamp(Number.isFinite(save.startChoice)?save.startChoice:0,0,save.unlockedStart); $('homeBest').innerHTML=fmt(save.best)+' <em>m</em>'; $('homeGold').textContent=fmt(save.gold);syncStartChoice();fitHomeMenu();fitHomeStats(); }
 function refreshSound(){document.querySelectorAll('.sound-button').forEach(b=>{b.textContent=save.sound?'♪':'♪̸';b.setAttribute('aria-pressed',String(save.sound));b.setAttribute('aria-label',save.sound?'Turn sound off':'Turn sound on');});}
 function initAudio(){
@@ -513,11 +514,12 @@ function resize(){
  vw=Math.max(1,innerWidth);vh=Math.max(1,innerHeight);dpr=Math.min(devicePixelRatio||1,2);
  canvas.width=Math.round(vw*dpr);canvas.height=Math.round(vh*dpr);homeSceneCache=null;fitHomeMenu();fitHomeStats();
  scale=Math.min(vh/720,vw/560);viewW=vw/scale;viewH=vh/scale;offsetY=Math.max(0,(viewH-720)*.4);
- if(p&&mode!=='home'&&p.x<OBSTACLE_START_X)obstacles=obstacles.filter(o=>obstacleLeft(o)>=openingSpawnX());
- if(p&&mode!=='home')camera=(mode==='dying'&&death?death.impactX:departure.phase==='entering'||departure.phase==='waiting'?START_X:p.x)-playerScreenX();
+ if(p&&mode!=='home'&&p.x<runObstacleStartX)obstacles=obstacles.filter(o=>obstacleLeft(o)>=openingSpawnX());
+ if(p&&mode!=='home')camera=(mode==='dying'&&death?death.impactX:departure.phase==='entering'||departure.phase==='waiting'?runStartX:p.x)-playerScreenX();
  accumulator=0;
 }
 function playerScreenX(){return Math.min(330,viewW*.265);}
+function activeStartPlatform(){const shift=runStartX-START_X;return {left:START_PLATFORM.left+shift,right:START_PLATFORM.right+shift,top:START_PLATFORM.top,bottom:START_PLATFORM.bottom};}
 /* speed is implemented in the 006 gameplay section below. */
 
 /* buildUntil is implemented in the 006 gameplay section below. */
@@ -529,6 +531,7 @@ function startRun(testSeed,startAt=selectedStart){
  startAt=clamp(Math.floor(startAt||0),0,save.unlockedStart);
  const startMetres=startAt>0?DELIVERIES[startAt-1].metres:0;
  const startX=START_X+startMetres*10;
+ runStartX=startX;runObstacleStartX=startX+OBSTACLE_START_DISTANCE*10;
  nextAnchorX=startAt>0?startX+155:330;anchorId=startAt*1000;segmentIndex=startAt*1000;generationX=nextAnchorX;
  p={x:startX,y:START_PLATFORM.top-ROOK_FOOT_OFFSET,vx:0,vy:0,r:19*.98,rope:null,angle:0,grounded:true};
  runTime=0;runGold=0;distance=startMetres;cleanSwings=0;combo=0;nextMilestone=Math.max(250,Math.ceil((startMetres+250)/250)*250);totalCollected=0;
@@ -543,7 +546,7 @@ function startRun(testSeed,startAt=selectedStart){
  delivered=startAt;deliveryGlow=0;deliveryFx=null;
  camera=p.x-playerScreenX();buildUntil(camera+viewW+1050);
  mode='ready';readyType='start';accumulator=0;toastLife=0;
- const entryX=camera-60,travel=START_X-entryX;
+ const entryX=camera-60,travel=runStartX-entryX;
  const brake=Math.min(ENTRY_BRAKE_DISTANCE,travel*.4),cruise=(travel-brake)/ENTRY_SPEED;
  departure={phase:'entering',time:0,elapsed:0,startX:entryX,cruise,brakeTime:2*brake/ENTRY_SPEED,duration:cruise+2*brake/ENTRY_SPEED};
  p.x=entryX;p.vx=ENTRY_SPEED;
@@ -574,13 +577,13 @@ function updateDeparture(dt){
  }
  p.y=START_PLATFORM.top-ROOK_FOOT_OFFSET;p.vy=0;p.angle=0;p.grounded=true;
  if(elapsed>=departure.duration){
-  p.x=START_X;p.vx=0;departure.phase='waiting';
+  p.x=runStartX;p.vx=0;departure.phase='waiting';
   show($('readyHint'),true);setDepartureHint();updateStatus();
  }
 }
 function resolveStartPlatform(previousX,previousY){
  p.grounded=false;
- const ledge=START_PLATFORM,foot=p.y+ROOK_FOOT_OFFSET,previousFoot=previousY+ROOK_FOOT_OFFSET;
+ const ledge=activeStartPlatform(),foot=p.y+ROOK_FOOT_OFFSET,previousFoot=previousY+ROOK_FOOT_OFFSET;
  // The body radius is unchanged for traps. The platform uses the visible
  // soles for its floor contact so Rook actually stands on the drawn stone.
  if(p.x-p.r>=ledge.right||p.x+p.r<=ledge.left||foot<ledge.top-.001)return;
@@ -735,7 +738,7 @@ function completeFinish(reason,quit=false){
 }
 function toHome(){
  stopDeathSound();cancelStartPress();setHomeChrome(true);homeSceneCache=null;
- delivered=0;deliveryGlow=0;deliveryFx=null;
+ delivered=0;deliveryGlow=0;deliveryFx=null;runStartX=START_X;runObstacleStartX=OBSTACLE_START_X;
  if(mode==='playing'||mode==='ready'||mode==='paused')bank();
  mode='home';held=false;keyHolding=false;pointer=null;hoverPoint=null;dragOrigin=null;particles=[];labels=[];trail=[];rushTime=0;rushBlend=0;flightTime=0;flightShield=0;suspendedRush=null;death=null;accumulator=0;
  $('pauseButton').disabled=false;
@@ -1044,10 +1047,10 @@ function circlePolygon(x,y,r,points){
 }
 // Share the opening rule between spawn, drawing and collision. The current
 // world position (not the record distance) also protects a return to the start.
-function openingSpawnX(){return OBSTACLE_START_X+Math.max(0,viewW-playerScreenX())+150;}
+function openingSpawnX(){return runObstacleStartX+Math.max(0,viewW-playerScreenX())+150;}
 function obstacleLeft(o){return o.type==='saw'?o.x-o.r-9:o.x-12;}
-function openingClear(){return !p||p.x<OBSTACLE_START_X;}
-function obstacleEnabled(o){return (SAWS_ENABLED||o.type!=='saw')&&!openingClear()&&obstacleLeft(o)>=OBSTACLE_START_X;}
+function openingClear(){return !p||p.x<runObstacleStartX;}
+function obstacleEnabled(o){return (SAWS_ENABLED||o.type!=='saw')&&!openingClear()&&obstacleLeft(o)>=runObstacleStartX;}
 function obstacleHit(o,x,y,r){
  if(!obstacleEnabled(o)||o.rushSafe)return false;
  if(o.type==='saw')return hypot(x-o.x,y-sawY(o))<r+o.r-5;
@@ -1738,7 +1741,7 @@ function drawDeliveryTransfer(){
 }
 
 function drawStartPlatform(){
- const ledge=START_PLATFORM,right=ledge.right-camera;
+ const ledge=activeStartPlatform(),right=ledge.right-camera;
  if(right<-2||ledge.left-camera>viewW)return;
  const left=Math.max(ledge.left-camera,-64),top=ledge.top;
  const bottom=Math.min(ledge.bottom,Math.max(760,viewH-offsetY+48));
@@ -1783,7 +1786,7 @@ function drawGame(t){
  drawChain(t);
  // A short position-history trail follows real forward or backward momentum.
  drawMomentum(t);
- if(p.grounded){ellipse(ctx,p.x-camera,START_PLATFORM.top,22,2.5,'#06071370');}
+ if(p.grounded){ellipse(ctx,p.x-camera,activeStartPlatform().top,22,2.5,'#06071370');}
  const onDeparture=departure.phase==='entering'||departure.phase==='waiting';
  const rookTime=onDeparture?departure.time:t;
  const rookPose=currentRookPose();
