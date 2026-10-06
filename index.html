@@ -217,7 +217,7 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 </header>
  <div class="home-inner">
   <div class="hero-wrap"><canvas id="hero" width="700" height="680" aria-label="Rook, a tiny gold golem with a sapphire core and big golden hands"></canvas></div>
-  <div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>013</span></div>
+  <div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>014</span></div>
    <button id="play" class="primary-button" type="button" aria-label="Start"><span class="start-label">START</span></button>
    <p class="control-caption"><b>Hold a ring</b> to grapple. <b>Release</b> to swing.</p>
    <div class="stats-strip"><div><small>PERSONAL BEST</small><strong id="homeBest">0 <em>m</em></strong></div><span class="stat-divider"></span><div><small>TREASURE BANK</small><strong><span class="tiny-coin" aria-hidden="true">✦</span> <span id="homeGold">0</span></strong></div></div>
@@ -243,7 +243,7 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
    Art functions are isolated from physics so all visuals remain replaceable. */
 (() => {
 'use strict';
-const BUILD='013', STORAGE='rook.grapple.prototype.v1';
+const BUILD='014', STORAGE='rook.grapple.prototype.v1';
 const TEST=new URLSearchParams(location.search).has('test');
 const $=id=>document.getElementById(id);
 const canvas=$('world'), ctx=canvas.getContext('2d',{alpha:false});
@@ -290,7 +290,7 @@ let suspendedRush=null,death=null;
 let flightRng,flightLastSpawnM=-Infinity;
 let homeSceneCache=null,startPending=false,startTimer=0;
 let delivered=0,deliveryGlow=0,deliveryFx=null;
-const palette={gold:'#eabb54',pale:'#fff1bb',sapphire:'#56c5ff',ink:'#12152a',red:'#ed758e'};
+const palette={gold:'#eabb54',pale:'#fff1bb',sapphire:'#38aef5',ink:'#12152a',red:'#f05d77'};
 const defaults={version:1,best:0,gold:0,runs:0,bestSwings:0,sound:true};
 let save={...defaults};
 try{
@@ -1003,7 +1003,7 @@ function star(g,x,y,r,alpha=1,color='#fff6d7'){
  g.save();g.globalAlpha*=alpha;g.fillStyle=color;g.beginPath();g.moveTo(x,y-r);g.quadraticCurveTo(x+r*.18,y-r*.18,x+r,y);g.quadraticCurveTo(x+r*.18,y+r*.18,x,y+r);g.quadraticCurveTo(x-r*.18,y+r*.18,x-r,y);g.quadraticCurveTo(x-r*.18,y-r*.18,x,y-r);g.fill();g.restore();
 }
 function gemColors(type){return{
- sapphire:{light:'#c7eeff',mid:'#51b9f2',dark:'#335cac'},emerald:{light:'#d5ffe2',mid:'#64d7aa',dark:'#246c76'},ruby:{light:'#ffd3e4',mid:'#f590b2',dark:'#a54073'},diamond:{light:'#ffffff',mid:'#b3e8fc',dark:'#778dd9'},amethyst:{light:'#ecd7ff',mid:'#ad81df',dark:'#57458f'}
+ sapphire:{light:'#bfe8ff',mid:'#2caef3',dark:'#234fa8'},emerald:{light:'#d4ffe3',mid:'#41cf7d',dark:'#1f7f46'},ruby:{light:'#ffd0dc',mid:'#f05b78',dark:'#ad264f'},diamond:{light:'#ffffff',mid:'#b3e8fc',dark:'#778dd9'},amethyst:{light:'#ecd7ff',mid:'#ad81df',dark:'#57458f'}
  }[type]||{light:'#ecd7ff',mid:'#ad81df',dark:'#57458f'};}
 function gem(g,x,y,r,type='sapphire',rot=0){
  const c=gemColors(type);g.save();g.translate(x,y);g.rotate(rot);
