@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#dfe3e7">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 025.">
+<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 026.">
 <title>Emily Game · Grapple Prototype 017</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2716%27%20fill%3D%27%2317192c%27%2F%3E%3Crect%20x%3D%2719%27%20y%3D%2732%27%20width%3D%2726%27%20height%3D%2727%27%20rx%3D%278%27%20fill%3D%27%23d8a747%27%2F%3E%3Cpath%20d%3D%27M32%2041L39%2046%2032%2055%2025%2046Z%27%20fill%3D%27%2366cfff%27%2F%3E%3Crect%20x%3D%2710%27%20y%3D%276%27%20width%3D%2744%27%20height%3D%2732%27%20rx%3D%2712%27%20fill%3D%27%23eaba4c%27%2F%3E%3Crect%20x%3D%2717%27%20y%3D%2715%27%20width%3D%2730%27%20height%3D%2716%27%20rx%3D%276%27%20fill%3D%27%23fff0c9%27%2F%3E%3Ccircle%20cx%3D%2725%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3Ccircle%20cx%3D%2739%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3C%2Fsvg%3E">
 <style>:root{color-scheme:dark;--ink:#101121;--gold:#efc464;--pale:#fff1c9;--muted:#a7a4b3;--blue:#8dd9ff;--border:rgba(237,194,100,.24)}
@@ -213,7 +213,7 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
  justify-items:center;align-items:start;align-self:center}
 #home .home-menu-slot .home-copy{align-self:start;transform:translateX(var(--menu-offset-x,0px))}
 
-.start-point-button{width:100%;min-height:38px;margin-top:10px;border:1px solid #8f9aa450;border-radius:9px;background:linear-gradient(180deg,#d8dde2 0%,#bcc4cc 50%,#d2d8de 100%);color:#49545e;font-size:10px;font-weight:700;letter-spacing:1.4px;box-shadow:inset 0 1px 0 #fafdff,0 2px 0 #88919a55;transition:filter .15s,color .15s,border-color .15s}.start-point-button:hover{filter:brightness(1.03);color:#2e3942;border-color:#b0bac350}.start-point-button .start-choice-sapphire{color:#218fe3;font-weight:850;text-shadow:0 1px 0 #ffffff99}.start-point-button:active{transform:translateY(2px);box-shadow:inset 0 1px 0 #fafdff,0 1px 0 #88919a55}@media(max-width:720px) and (orientation:portrait){.start-point-button{min-height:36px;font-size:9px;margin-top:8px}}@media(max-height:520px) and (orientation:landscape){.start-point-button{min-height:31px;font-size:8px;margin-top:7px}}
+.start-point-button{width:100%;min-height:38px;margin-top:10px;border:1px solid #8f9aa450;border-radius:9px;background:linear-gradient(180deg,#d8dde2 0%,#bcc4cc 50%,#d2d8de 100%);color:#49545e;font-size:10px;font-weight:700;letter-spacing:1.4px;box-shadow:inset 0 1px 0 #fafdff,0 2px 0 #88919a55;transition:filter .15s,color .15s,border-color .15s}.start-point-button:hover{filter:brightness(1.03);color:#2e3942;border-color:#b0bac350}.start-point-button .start-choice-sapphire{color:#218fe3;font-weight:850;text-shadow:0 1px 0 #ffffff99}.start-point-button .start-choice-ruby{color:#df3f5e;font-weight:850;text-shadow:0 1px 0 #ffffff99}.start-point-button .start-choice-emerald{color:#249b57;font-weight:850;text-shadow:0 1px 0 #ffffff99}.start-point-button .start-choice-amethyst{color:#8d35d6;font-weight:850;text-shadow:0 1px 0 #ffffff99}.start-point-button:active{transform:translateY(2px);box-shadow:inset 0 1px 0 #fafdff,0 1px 0 #88919a55}@media(max-width:720px) and (orientation:portrait){.start-point-button{min-height:36px;font-size:9px;margin-top:8px}}@media(max-height:520px) and (orientation:landscape){.start-point-button{min-height:31px;font-size:8px;margin-top:7px}}
 
 /* 021: compact four-delivery strip; all gems and labels use one size. */
 #home .home-footer{
@@ -303,6 +303,30 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 .ready-hint .keyboard-hint{color:#c7d3db!important}
 /* glassy in-run upper/lower canvas fields: light-reflective rather than navy/steel blocks */
 
+
+/* 026: highlighted controls use solid white/silver steel instead of dark glass. */
+.icon-button,
+#homeTop .icon-button,
+#hud .icon-button{
+ background:linear-gradient(180deg,#fbfdfe 0%,#e7edf1 38%,#cbd4da 62%,#eef2f4 100%)!important;
+ border-color:#a8b4bc!important;
+ color:#6f521d!important;
+ text-shadow:0 1px 0 #ffffff!important;
+ box-shadow:inset 0 1px 0 #ffffff,inset 0 -1px 0 #aeb8bf,0 2px 0 #78848c55,0 4px 10px #14212a1e!important;
+ -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+}
+.icon-button:active,#homeTop .icon-button:active,#hud .icon-button:active{transform:translateY(2px);box-shadow:inset 0 1px 2px #9eaab255,0 1px 0 #78848c55!important}
+.sound-button[aria-pressed="false"],#homeTop .sound-button[aria-pressed="false"]{color:#8c969d!important}
+.status{
+ background:linear-gradient(180deg,#fbfdfe 0%,#e2e9ed 45%,#c7d1d7 100%)!important;
+ border-color:#a9b6be!important;
+ color:#374651!important;
+ text-shadow:0 1px 0 #ffffff!important;
+ box-shadow:inset 0 1px 0 #ffffff,0 2px 7px #111d241f!important;
+ -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+}
+.status.hooked{color:#73531b!important;border-color:#b89b5c!important}.status>span:first-child{box-shadow:none!important}
+
 </style>
 </head>
 <body>
@@ -315,7 +339,7 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 </header>
  <div class="home-inner">
   <div class="hero-wrap"><canvas id="hero" width="700" height="680" aria-label="Rook, a tiny gold golem with a sapphire core and big golden hands"></canvas></div>
-  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>025</span></div>
+  <div class="home-menu-slot"><div class="home-copy"><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>026</span></div>
    <button id="play" class="primary-button" type="button" aria-label="Start"><span class="start-label">START</span></button>
    <button id="startPoint" class="start-point-button hidden" type="button" aria-label="Choose starting shrine">START FROM · BEGINNING</button>
    <p class="control-caption"><b>Hold a ring</b> to grapple. <b>Release</b> to swing.</p>
@@ -338,11 +362,11 @@ canvas.panel-gem{display:block;width:44px;height:44px;margin:0 auto 20px;text-sh
 <section id="helpPanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel help-panel"><div class="eyebrow">ONE BUTTON. ALL MOMENTUM.</div><h2 id="helpTitle">Meet your next swing.</h2><div class="help-step"><span>01</span><div><h3>Choose any visible ring</h3><p>Hold on a grapple ring to choose it—even behind Rook or at the far edge of the screen. Hold empty space for the easy automatic option.</p></div></div><div class="help-step"><span>02</span><div><h3>Release to swing</h3><p>Let go to carry your momentum. Rook can swing backward too; the chain stays attached while you hold.</p></div></div><div class="help-step"><span>03</span><div><h3>Switch your anchor</h3><p>Release and hold another ring, or drag your held finger onto it. Gold and gems are treasure; red crystal traps are hazards.</p></div></div><div class="help-step"><span>04</span><div><h3>Find your rhythm</h3><p>Release during the lower sweep for a clean swing. Three in a row earn ×2 treasure; six earn ×3. Each ring rewards you once per run.</p></div></div><div class="help-step"><span>05</span><div><h3>Crystal Rush</h3><p>Gems, coins, and clean swings charge a seven-second bonus: extra speed, double treasure, and protection. Traps fold away in the bonus stretch. No extra button.</p></div></div><div class="help-step"><span>06</span><div><h3>Crystal Flight</h3><p>Swing into the rare winged blue crystal. Fly head-first for 10 seconds: hold to rise and release to dive. A shield absorbs one hit during flight. When flight ends, hold to auto-grapple or choose a ring. The pickup activates immediately, even during Rush. Any remaining Rush time pauses and resumes after flight.</p></div></div><div class="help-step"><span>07</span><div><h3>A little room to find your swing</h3><p>The first 500 m have no obstacles. Rings and treasure are still there, so you can find your rhythm. After 500 m, watch for crimson crystal traps above and below. You still need to catch rings to avoid falling.</p></div></div><div class="help-step"><span>08</span><div><h3>A little guardian, four deliveries</h3><p>Bring Sapphire to 10,000 m, Ruby to 20,000 m, Emerald to 30,000 m, and Amethyst to 40,000 m. Rook’s chest gem changes automatically after each delivery. Once a shrine is unlocked, the Home Screen can start a future run directly on that shrine’s landing deck.</p></div></div><p class="help-controls">Phone: hold a ring; drag to switch<br>Computer: hold left mouse on a ring; Space auto-grapples<br>Pause: Esc or P</p><button id="closeHelp" class="primary-button">LET'S SWING <span>↗</span></button></div></section>
 <div id="saveNotice" class="save-notice hidden" role="status">Saving is unavailable in this browser. You can still play.</div>
 <noscript><div class="noscript">Enable JavaScript to play Emily Game.</div></noscript>
-<script>/* Rook — Grapple Prototype 025. Original dependency-free canvas prototype.
+<script>/* Rook — Grapple Prototype 026. Original dependency-free canvas prototype.
    Art functions are isolated from physics so all visuals remain replaceable. */
 (() => {
 'use strict';
-const BUILD='025', STORAGE='rook.grapple.prototype.v1';
+const BUILD='026', STORAGE='rook.grapple.prototype.v1';
 const TEST=new URLSearchParams(location.search).has('test');
 const $=id=>document.getElementById(id);
 const canvas=$('world'), ctx=canvas.getContext('2d',{alpha:false});
@@ -474,7 +498,7 @@ function fitHomeMenu(){
 }
 function startChoiceLabel(i){return i<=0?'BEGINNING':DELIVERIES[i-1].name.replace(' Shrine','').toUpperCase();}
 function nextDeliveryLabel(done){return done>=DELIVERIES.length?'FREE EXPLORE':DELIVERIES[done].name.replace(' Shrine','').toUpperCase()+' · '+fmt(DELIVERIES[done].metres)+' m';}
-function syncStartChoice(){selectedStart=clamp(Math.floor(selectedStart),0,save.unlockedStart);const b=$('startPoint');if(!b)return;show(b,save.unlockedStart>0);const label=startChoiceLabel(selectedStart);b.innerHTML='START FROM · '+(label==='SAPPHIRE'?'<span class="start-choice-sapphire">SAPPHIRE</span>':label);b.setAttribute('aria-label','Choose starting shrine. Current selection: '+label);}
+function syncStartChoice(){selectedStart=clamp(Math.floor(selectedStart),0,save.unlockedStart);const b=$('startPoint');if(!b)return;show(b,save.unlockedStart>0);const label=startChoiceLabel(selectedStart),cls={'SAPPHIRE':'sapphire','RUBY':'ruby','EMERALD':'emerald','AMETHYST':'amethyst'}[label];b.innerHTML='START FROM · '+(cls?'<span class="start-choice-'+cls+'">'+label+'</span>':label);b.setAttribute('aria-label','Choose starting shrine. Current selection: '+label);}
 function refreshHome(){ selectedStart=clamp(Number.isFinite(save.startChoice)?save.startChoice:0,0,save.unlockedStart); $('homeBest').innerHTML=fmt(save.best)+' <em>m</em>'; $('homeGold').textContent=fmt(save.gold);syncStartChoice();fitHomeMenu();fitHomeStats(); }
 function refreshSound(){document.querySelectorAll('.sound-button').forEach(b=>{b.textContent=save.sound?'♪':'♪̸';b.setAttribute('aria-pressed',String(save.sound));b.setAttribute('aria-label',save.sound?'Turn sound off':'Turn sound on');});}
 function initAudio(){
@@ -1372,16 +1396,16 @@ function buildSceneryCache(){
   for(let x=90;x<w;x+=270){
    rr(g,x-68,142,136,494,64);g.fillStyle='#16212745';g.fill();g.strokeStyle='#7d709222';g.lineWidth=2;g.stroke();
    rr(g,x-55,157,110,470,52);g.strokeStyle='#bba07614';g.lineWidth=1;g.stroke();
-   poly(g,[[x-36,236],[x+12,223],[x+140,655],[x-45,655]],'#a4cfff05');
+   poly(g,[[x-36,236],[x+12,223],[x+140,655],[x-45,655]],'#f2c76a08');
   }
  });
  const mid=make(1440,(g,w)=>{
-  const stone=g.createLinearGradient(0,0,0,680);stone.addColorStop(0,'#344147');stone.addColorStop(.6,'#28353b');stone.addColorStop(1,'#1b272d');
-  function metal(x,y,width,height){const q=g.createLinearGradient(x,y,x+width,y);q.addColorStop(0,'#413739');q.addColorStop(.3,'#716049');q.addColorStop(.47,'#a58a56');q.addColorStop(.56,'#5c4c3e');q.addColorStop(1,'#302d35');return q;}
+  const stone=g.createLinearGradient(0,0,0,680);stone.addColorStop(0,'#695437');stone.addColorStop(.34,'#4b3a29');stone.addColorStop(.72,'#34291f');stone.addColorStop(1,'#241d18');
+  function metal(x,y,width,height){const q=g.createLinearGradient(x,y,x+width,y);q.addColorStop(0,'#4a3825');q.addColorStop(.22,'#8a6a38');q.addColorStop(.45,'#d1ad61');q.addColorStop(.56,'#8f6f3d');q.addColorStop(.76,'#b28b4d');q.addColorStop(1,'#3a2d22');return q;}
   function frame(cx){
-   rr(g,cx-177,149,354,495,150);g.fillStyle='#18262c99';g.fill();g.strokeStyle='#59493b';g.lineWidth=14;g.stroke();
-   rr(g,cx-167,158,334,480,142);g.strokeStyle='#bd9b5944';g.lineWidth=2;g.stroke();
-   rr(g,cx-155,168,310,456,134);g.strokeStyle='#73625039';g.lineWidth=1;g.stroke();
+   rr(g,cx-177,149,354,495,150);g.fillStyle='#18262c99';g.fill();g.strokeStyle='#a07b42';g.lineWidth=14;g.stroke();
+   rr(g,cx-167,158,334,480,142);g.strokeStyle='#e1bd724d';g.lineWidth=2;g.stroke();
+   rr(g,cx-155,168,310,456,134);g.strokeStyle='#b18b5044';g.lineWidth=1;g.stroke();
    for(let j=0;j<11;j++){
     const a=Math.PI+j/10*Math.PI,x=cx+169*Math.cos(a),y=315+156*Math.sin(a);
     g.save();g.translate(x,y);g.rotate(a+Math.PI/2);rr(g,-8,-6,16,13,2);g.fillStyle=j%2?'#8b6d4059':'#b5975345';g.fill();g.restore();
@@ -1401,7 +1425,7 @@ function buildSceneryCache(){
   g.fillStyle='#a98a544f';g.fillRect(145,557,203,4);poly(g,[[240,569],[253,582],[240,595],[227,582]],'#988c623e');
   // The central circular vault door establishes the room's scale.
   const cx=720,cy=413;
-  ellipse(g,cx,cy,159,159,'#070e1c');
+  ellipse(g,cx,cy,159,159,'#201b16');
   const door=g.createRadialGradient(cx-47,cy-60,8,cx,cy,161);door.addColorStop(0,'#59656b');door.addColorStop(.36,'#3d4a50');door.addColorStop(1,'#212d33');
   ellipse(g,cx,cy,146,146,door);
   for(const [r,color,width] of [[154,'#957844',7],[141,'#c4a06144',2],[128,'#5f54444d',6],[103,'#c09d5b35',1]]){
@@ -1416,7 +1440,7 @@ function buildSceneryCache(){
   g.strokeStyle='#756143';g.lineWidth=9;g.beginPath();
   for(let j=0;j<5;j++){const a=j/5*TAU-.3;g.moveTo(cx+17*Math.cos(a),cy+17*Math.sin(a));g.lineTo(cx+71*Math.cos(a),cy+71*Math.sin(a));}g.stroke();
   g.beginPath();g.arc(cx,cy,70,0,TAU);g.strokeStyle='#b2975960';g.lineWidth=7;g.stroke();
-  ellipse(g,cx,cy,37,37,'#79603f');ellipse(g,cx,cy,31,31,'#19263b');
+  ellipse(g,cx,cy,37,37,'#79603f');ellipse(g,cx,cy,31,31,'#2c241b');
   g.save();g.globalAlpha=.55;gem(g,cx,cy,23,'sapphire');g.restore();
   // A treasury display with a lacquered chest and restrained coin highlights.
   light=g.createRadialGradient(1200,462,8,1200,454,175);light.addColorStop(0,'#94764019');light.addColorStop(1,'#82674b00');g.fillStyle=light;g.fillRect(1020,237,360,380);
@@ -1462,7 +1486,7 @@ function drawSceneryTile(layer,cam,factor,alpha=1){
 }
 function backdrop(cam,t){
  ctx.setTransform(dpr,0,0,dpr,0,0);
- const bg=ctx.createLinearGradient(0,0,0,vh);bg.addColorStop(0,'#141c20');bg.addColorStop(.48,'#2b3940');bg.addColorStop(1,'#182329');ctx.fillStyle=bg;ctx.fillRect(0,0,vw,vh);
+ const bg=ctx.createLinearGradient(0,0,0,vh);bg.addColorStop(0,'#211d18');bg.addColorStop(.48,'#3a3023');bg.addColorStop(1,'#1e1a16');ctx.fillStyle=bg;ctx.fillRect(0,0,vw,vh);
  ctx.scale(scale,scale);ctx.translate(0,offsetY);
  const desired=clamp(scale*dpr,.8,1.5);
  if(!sceneryCache||Math.abs(sceneryCache.quality-desired)>.15)sceneryCache=buildSceneryCache();
@@ -1473,25 +1497,25 @@ function backdrop(cam,t){
  if(!reducedMotion){
   const shift=mod(cam*.22,480);
   for(let x=-shift+75;x<viewW+85;x+=480){
-   const glow=ctx.createRadialGradient(x,277,3,x,277,62);glow.addColorStop(0,'#81c6f51b');glow.addColorStop(1,'#73b8ed00');ctx.globalAlpha=.72+Math.sin(t*1.6+x*.004)*.15;ctx.fillStyle=glow;ctx.fillRect(x-63,214,126,126);
+   const glow=ctx.createRadialGradient(x,277,3,x,277,62);glow.addColorStop(0,'#ffd48324');glow.addColorStop(1,'#d5a44700');ctx.globalAlpha=.72+Math.sin(t*1.6+x*.004)*.15;ctx.fillStyle=glow;ctx.fillRect(x-63,214,126,126);
   }
   ctx.globalAlpha=1;
  }
  // An uninterrupted, bevelled ceiling rail grounds the anchor rings.
- ctx.fillStyle='#1b262c';ctx.fillRect(0,-offsetY-5,viewW,108+offsetY);
- const trim=ctx.createLinearGradient(0,99,0,134);trim.addColorStop(0,'#302d2e');trim.addColorStop(.25,'#87713e');trim.addColorStop(.43,'#c2a46c');trim.addColorStop(.50,'#5e4c32');trim.addColorStop(1,'#142133');ctx.fillStyle=trim;ctx.fillRect(0,103,viewW,30);
- ctx.fillStyle='#e9d39e70';ctx.fillRect(0,115,viewW,1);ctx.fillStyle='#1a252a';ctx.fillRect(0,131,viewW,3);
+ ctx.fillStyle='#2f261d';ctx.fillRect(0,-offsetY-5,viewW,108+offsetY);
+ const trim=ctx.createLinearGradient(0,99,0,134);trim.addColorStop(0,'#453321');trim.addColorStop(.23,'#9a763c');trim.addColorStop(.43,'#dec078');trim.addColorStop(.58,'#8b6737');trim.addColorStop(1,'#3a2b1f');ctx.fillStyle=trim;ctx.fillRect(0,103,viewW,30);
+ ctx.fillStyle='#e9d39e70';ctx.fillRect(0,115,viewW,1);ctx.fillStyle='#3c2f22';ctx.fillRect(0,131,viewW,3);
  for(let x=-mod(cam*.65,116);x<viewW;x+=116){
   rr(ctx,x,108,54,13,3);ctx.strokeStyle='#2b271f88';ctx.lineWidth=1;ctx.stroke();ellipse(ctx,x+7,113,1.7,1.7,'#e5c48266');ellipse(ctx,x+46,113,1.7,1.7,'#e5c48266');
  }
  drawSceneryTile(sceneryCache.near,cam,.44);
- ctx.fillStyle='#182329';ctx.fillRect(0,680,viewW,viewH+offsetY);
+ ctx.fillStyle='#2b241d';ctx.fillRect(0,680,viewW,viewH+offsetY);
  ctx.fillStyle='#99845040';ctx.fillRect(0,675,viewW,3);ctx.fillStyle='#d9bc711a';ctx.fillRect(0,674,viewW,1);
  for(let x=-mod(cam*.66,175);x<viewW;x+=175){
-  ctx.strokeStyle='#698db91b';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,679);ctx.lineTo(x-80,760);ctx.stroke();
+  ctx.strokeStyle='#c9a16020';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,679);ctx.lineTo(x-80,760);ctx.stroke();
  }
- ctx.fillStyle='#b2c8e60a';ctx.fillRect(0,702,viewW,1);
- const fade=ctx.createLinearGradient(0,644,0,742);fade.addColorStop(0,'#18232900');fade.addColorStop(1,'#0d1519b0');ctx.fillStyle=fade;ctx.fillRect(0,644,viewW,110);
+ ctx.fillStyle='#f0cf8a0d';ctx.fillRect(0,702,viewW,1);
+ const fade=ctx.createLinearGradient(0,644,0,742);fade.addColorStop(0,'#2b241d00');fade.addColorStop(1,'#17120fb0');ctx.fillStyle=fade;ctx.fillRect(0,644,viewW,110);
  if(rushBlend>.015){
   const glow=ctx.createLinearGradient(0,150,0,650);glow.addColorStop(0,'#86baff00');glow.addColorStop(.5,'#7cabff0c');glow.addColorStop(1,'#f6c34d1c');ctx.globalAlpha=rushBlend;ctx.fillStyle=glow;ctx.fillRect(0,134,viewW,539);ctx.globalAlpha=1;
  }
@@ -1801,7 +1825,7 @@ function drawStartPlatform(){
  const visibleRight=Math.min(right,viewW+64),width=visibleRight-left;
  if(width<=0)return;
  const stone=ctx.createLinearGradient(0,top,0,top+290);
- stone.addColorStop(0,'#343447');stone.addColorStop(.22,'#252839');stone.addColorStop(1,'#161b2a');
+ stone.addColorStop(0,'#5a4933');stone.addColorStop(.22,'#413326');stone.addColorStop(1,'#241d18');
  ctx.fillStyle=stone;ctx.fillRect(left,top,width,bottom-top);
  // Floor top and right-hand wall align with the solid collision object.
  ctx.fillStyle='#b18949';ctx.fillRect(left,top,width,14);
@@ -1855,7 +1879,7 @@ function drawHero(t){
  const g=heroCtx;g.clearRect(0,0,700,680);g.save();g.translate(350,343);g.scale(1.2,1.2);
  // A solid, sapphire-inlaid launch plinth uses the same bevels as the run.
  ellipse(g,0,192,131,13,'#04081270');
- const stone=g.createLinearGradient(0,122,0,190);stone.addColorStop(0,'#435269');stone.addColorStop(.4,'#22334b');stone.addColorStop(1,'#132338');
+ const stone=g.createLinearGradient(0,122,0,190);stone.addColorStop(0,'#6b573b');stone.addColorStop(.4,'#433425');stone.addColorStop(1,'#261e18');
  poly(g,[[-104,129],[104,129],[99,183],[77,192],[-77,192],[-99,183]],stone,'#95703d',2);
  for(const side of [-1,1]){
   rr(g,side*84-9,137,18,45,3);g.fillStyle=goldGrad(g,side*84-9,137,18,45);g.fill();
