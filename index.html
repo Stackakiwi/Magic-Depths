@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="home-silver">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#101121">
+<meta name="theme-color" content="#dfe3e7">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 009.">
-<title>Emily Game · Grapple Prototype 009</title>
+<meta name="description" content="Emily Game. Meet Rook, a little gold-and-sapphire guardian. Deliver a sapphire to 10,000 m and a ruby to 20,000 m. Hold to grapple, release to swing. Playable prototype 011.">
+<title>Emily Game · Grapple Prototype 011</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2716%27%20fill%3D%27%2317192c%27%2F%3E%3Crect%20x%3D%2719%27%20y%3D%2732%27%20width%3D%2726%27%20height%3D%2727%27%20rx%3D%278%27%20fill%3D%27%23d8a747%27%2F%3E%3Cpath%20d%3D%27M32%2041L39%2046%2032%2055%2025%2046Z%27%20fill%3D%27%2366cfff%27%2F%3E%3Crect%20x%3D%2710%27%20y%3D%276%27%20width%3D%2744%27%20height%3D%2732%27%20rx%3D%2712%27%20fill%3D%27%23eaba4c%27%2F%3E%3Crect%20x%3D%2717%27%20y%3D%2715%27%20width%3D%2730%27%20height%3D%2716%27%20rx%3D%276%27%20fill%3D%27%23fff0c9%27%2F%3E%3Ccircle%20cx%3D%2725%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3Ccircle%20cx%3D%2739%27%20cy%3D%2722%27%20r%3D%273%27%20fill%3D%27%2323354b%27%2F%3E%3C%2Fsvg%3E">
 <style>:root{color-scheme:dark;--ink:#101121;--gold:#efc464;--pale:#fff1c9;--muted:#a7a4b3;--blue:#8dd9ff;--border:rgba(237,194,100,.24)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f7f0dd}body{position:fixed;inset:0;overscroll-behavior:none}button{font:inherit;cursor:pointer;touch-action:manipulation;border:0;color:inherit}button:focus-visible{outline:3px solid var(--blue);outline-offset:5px}button:active{transform:translateY(1px)}.hidden{display:none!important}#world{position:absolute;inset:0;width:100%;height:100%;touch-action:none;outline:0}#vignette{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 130px 25px rgba(5,7,18,.45)}.screen{position:absolute;inset:0}.topbar{position:absolute;top:calc(env(safe-area-inset-top,0px) + 24px);left:36px;right:36px;z-index:4;display:flex;justify-content:space-between;align-items:center}.brand{display:flex;gap:12px;align-items:center;color:#c5b895;font-size:10px;font-weight:700;letter-spacing:2.5px}.brand-gem{font-size:22px;color:var(--gold);text-shadow:0 0 16px #d3994844}.top-actions{display:flex;gap:10px}.icon-button{border:1px solid var(--border);background:rgba(16,18,34,.76);border-radius:13px;width:44px;height:44px;font-size:20px;color:#efdfb9;display:grid;place-items:center;line-height:1}.icon-button:hover{border-color:#f2c66b88;background:#262338}.sound-button[aria-pressed="false"]{color:#797684}.home-inner{position:absolute;top:49%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;width:min(910px,92%);gap:50px}.hero-wrap{position:relative;width:350px;height:370px;flex-shrink:0;display:flex;align-items:center;justify-content:center}.hero-halo{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(ellipse,#759af31a 0%,#7f5b2921 38%,transparent 70%);filter:blur(10px)}#hero{position:relative;width:350px;height:340px}.mascot-tag{position:absolute;bottom:8px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:8px;font-size:9px;letter-spacing:2px;color:#ababc0;font-weight:600}.mascot-tag i{width:5px;height:5px;border-radius:50%;background:#91d6f7;box-shadow:0 0 9px #82caff}.home-copy{width:358px;flex-shrink:0}.eyebrow{font-size:9px;font-weight:700;letter-spacing:2.4px;color:#bea877}.home-copy h1{margin:10px 0 3px;font-family:Georgia,"Times New Roman",serif;font-size:88px;line-height:1.04;font-weight:700;letter-spacing:10px;background:linear-gradient(180deg,#fff7dc 5%,#f4d381 43%,#bd8437 99%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 12px #0007)}.prototype-tag{font-size:9px;letter-spacing:3px;color:#beb8b6;display:flex;align-items:center;gap:12px}.prototype-tag span{font-size:9px;letter-spacing:1px;color:var(--gold);border:1px solid #d3b16355;padding:3px 6px;border-radius:4px}.intro{font-family:Georgia,"Times New Roman",serif;font-size:22px;line-height:1.4;color:#e4dccd;margin:24px 0}.primary-button{width:100%;min-height:57px;border:1px solid #ffe5a1;border-radius:13px;display:flex;align-items:center;justify-content:center;gap:22px;background:linear-gradient(165deg,#fce6aa 0%,#e7b54d 56%,#c79235 100%);color:#332612;font-size:12px;font-weight:850;letter-spacing:1.8px;box-shadow:0 6px 0 #755127,0 12px 32px #e2af3522,inset 0 2px 0 #fff7cd88;text-shadow:0 1px 0 #ffedb788;transition:filter .15s}.primary-button span{font-size:25px;line-height:1;font-weight:400}.primary-button:hover{filter:brightness(1.07)}.primary-button:active{transform:translateY(3px);box-shadow:0 3px 0 #755127,0 7px 24px #e2af3522}.control-caption{font-size:11px;color:#a6a5b5;text-align:center;margin:18px 0 0;letter-spacing:.1px}.control-caption b{color:#ddd3b9;font-weight:600}.stats-strip{display:flex;align-items:center;justify-content:center;gap:35px;margin-top:31px}.stats-strip>div{text-align:left}.stats-strip small,.hud-metric small,.result-stats small{font-size:8px;letter-spacing:1.5px;color:#a4a1b2;display:block;margin-bottom:6px;font-weight:650}.stats-strip strong{font-size:22px;font-weight:650;letter-spacing:.4px;font-variant-numeric:tabular-nums}.stats-strip em,.hud-metric em{font-style:normal;font-size:12px;font-weight:400;color:#ada6a4}.stat-divider{height:30px;width:1px;background:var(--border)}.tiny-coin{color:#efc966;font-size:.85em}.home-footer{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 23px);left:10px;right:10px;text-align:center;font-size:8px;letter-spacing:1.8px;color:#6d6a7c}.home-footer span{margin:0 8px;color:#8c7247}#hud{position:absolute;left:26px;right:26px;top:calc(env(safe-area-inset-top,0px) + 18px);display:flex;align-items:center;justify-content:space-between;z-index:4;pointer-events:none}.hud-left{display:flex;gap:32px}.hud-metric{min-width:68px;text-shadow:0 2px 6px #000}.hud-metric strong{font-size:26px;font-weight:650;letter-spacing:.5px;font-variant-numeric:tabular-nums}.hud-metric small{margin-bottom:2px}.gold-metric strong{color:#efd186}.hud-center{position:absolute;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:2.4px;color:#bbb08f}.hud-center span{border:1px solid #8a75514d;border-radius:4px;padding:4px 6px;margin-left:7px;color:#f1cc7a}.hud-actions{display:flex;gap:10px;pointer-events:auto}.status{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 27px);left:50%;transform:translateX(-50%);font-size:10px;font-weight:700;letter-spacing:2px;color:#bdb8c8;white-space:nowrap;display:flex;align-items:center;gap:10px;pointer-events:none;background:rgba(11,14,25,.66);padding:12px 18px;border:1px solid #a58b4729;border-radius:100px}.status>span:first-child{width:6px;height:6px;border-radius:50%;background:#e8c269;box-shadow:0 0 10px #dca93455}.status.hooked{color:#ffdfa0;border-color:#eabd5655}.status.hooked>span:first-child{background:#88dcff;box-shadow:0 0 10px #5ac7ef77}.ready-hint{position:absolute;left:10px;right:10px;bottom:calc(env(safe-area-inset-bottom,0px) + 94px);text-align:center;pointer-events:none}.ready-hint h2{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:400;margin:9px 0;color:#fff0c7;text-shadow:0 2px 9px #000}.ready-hint p{font-size:12px;color:#c9c5cc;line-height:1.7;margin:0}.hold-symbol{font-size:22px;color:#f2d48f}.keyboard-hint{display:block;font-size:8px;letter-spacing:2px;color:#8e899c;margin-top:12px}.run-toast{position:absolute;top:calc(env(safe-area-inset-top,0px) + 103px);left:50%;transform:translateX(-50%);text-align:center;color:#ffe39a;font-size:11px;font-weight:650;letter-spacing:1.7px;white-space:nowrap;pointer-events:none;text-shadow:0 2px 9px #000}.modal{position:absolute;inset:0;background:rgba(6,9,19,.8);display:flex;align-items:center;justify-content:center;z-index:10;padding:20px;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}.panel{width:370px;max-width:100%;max-height:calc(100dvh - 40px);overflow:auto;text-align:center;background:linear-gradient(150deg,#222236 0%,#141827 75%);padding:36px 29px 20px;border:1px solid #ac89534d;border-radius:23px;box-shadow:0 20px 75px #0006,inset 0 1px 0 #ffffff08}.panel h2{font-family:Georgia,"Times New Roman",serif;font-size:28px;font-weight:400;line-height:1.2;margin:12px 0 14px;letter-spacing:-.4px}.panel>p{font-size:12px;line-height:1.6;color:#aaa8b8;margin-bottom:25px}.panel-gem{font-size:42px;margin:0 0 20px;color:#92d9ff;text-shadow:0 0 26px #55b9ff55}.text-button{margin-top:14px;padding:12px 10px;background:none;font-size:11px;color:#beb6ad;letter-spacing:.4px;min-height:40px}.text-button:hover{color:#ffe6a3}.result-panel{padding-top:29px}.result-panel h2{margin-bottom:8px}.result-panel .death-reason{margin:0;color:#a7a6b9;font-size:11px}.result-distance{margin:21px 0 10px}.result-distance>span{font-size:68px;line-height:1;color:#ffdf96;font-weight:700;letter-spacing:-2px;font-variant-numeric:tabular-nums}.result-distance small{display:block;letter-spacing:3px;font-size:8px;color:#a99e89;margin-top:7px}.new-best{font-size:8px;letter-spacing:1.7px;color:#91d8fc;margin:16px 0 0}.result-stats{display:flex;justify-content:space-around;margin:22px 0 27px;padding-top:20px;border-top:1px solid #a58b4729}.result-stats strong{font-size:23px;color:#f5e7c1;font-variant-numeric:tabular-nums}.help-panel{width:415px;text-align:left}.help-panel h2{margin-bottom:26px}.help-step{display:flex;gap:15px;margin:19px 0}.help-step>span{font-size:10px;color:#c9a655;line-height:20px}.help-step h3{font-size:13px;color:#f4e4bb;margin:0 0 5px}.help-step p{font-size:11px;line-height:1.7;margin:0;color:#b8b4c6}.help-controls{font-size:10px!important;line-height:1.8!important;color:#a69eae!important;padding:12px 0;border-top:1px solid #a58b4733}.save-notice{position:absolute;bottom:9px;left:50%;transform:translateX(-50%);width:min(360px,95%);padding:9px;background:#362e29;font-size:10px;text-align:center;border-radius:8px;z-index:20}.noscript{position:absolute;inset:0;display:grid;place-items:center;background:#141726;color:#f2d393;z-index:100}
@@ -60,9 +60,9 @@ canvas{-webkit-user-drag:none}
 .rush-meter.flying .rush-heading{color:#bdeeff}.rush-meter.flying #rushFill{background:linear-gradient(90deg,#4786d9,#85d9ff,#f0dfb1)}
 /* The story stays in one quiet line below the existing meter. */
 .delivery-hud{position:absolute;top:45px;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;pointer-events:none;font-size:8px;font-weight:700;letter-spacing:.65px;color:#d8d6cd;text-shadow:0 1px 5px #000}
-.delivery-hud i{width:7px;height:9px;transform:rotate(45deg);background:#86d5ff;border:1px solid #d9f4ff;box-shadow:0 0 6px #54b4ee44}
-.delivery-hud.ruby i{background:#e75e73;border-color:#ffc1ca;box-shadow:0 0 6px #f0608544}
-.delivery-hud.done i{background:#e5c36a;border-color:#fff0bd}
+.delivery-hud i{width:12px;height:16px;display:inline-block;clip-path:polygon(50% 0,85% 18%,74% 70%,50% 100%,17% 69%,8% 18%);background:linear-gradient(160deg,#dff8ff 0%,#8ddcff 30%,#4eaef0 56%,#2a5ca5 100%);border:1px solid #d9f4ff;box-shadow:0 0 6px #54b4ee44}
+.delivery-hud.ruby i{background:linear-gradient(160deg,#ffd5e4 0%,#ff9fbc 30%,#e06185 56%,#8c234c 100%);border-color:#ffc1ca;box-shadow:0 0 6px #f0608544}
+.delivery-hud.done i{background:linear-gradient(160deg,#fff3cc 0%,#f4dc8f 35%,#ddb55a 60%,#8f6730 100%);border-color:#fff0bd}
 .end-delivery{font-size:10px!important;letter-spacing:.4px;color:#edd19b!important;margin:-10px 0 17px!important}
 @media(max-height:520px) and (orientation:landscape){.delivery-hud{top:37px;font-size:7px;letter-spacing:.45px}.end-delivery{font-size:9px!important;margin:-7px 0 13px!important}.home-footer{font-size:6px}}
 @media(max-width:660px) and (orientation:landscape){.delivery-hud{left:58%;font-size:6px;letter-spacing:0;gap:4px}.delivery-hud i{width:5px;height:7px}.home-footer{font-size:5px}}
@@ -100,8 +100,8 @@ canvas{-webkit-user-drag:none}
 #home .home-footer{bottom:calc(var(--home-safe-bottom) + 14px);left:max(18px,calc(var(--home-safe-left) + 12px));right:max(18px,calc(var(--home-safe-right) + 12px));display:flex;align-items:center;justify-content:center;gap:17px;width:fit-content;max-width:calc(100% - 36px);margin:0 auto;padding:9px 16px;border:1px solid #a88b4e55;border-radius:9px;background:#101c2feb;box-shadow:inset 0 1px 0 #ffedb11c;font-size:8px;line-height:13px;letter-spacing:1px;color:#d0d7da}
 #home .home-footer span{margin:0;color:inherit}
 #home .route-note{display:flex;align-items:center;gap:8px}
-#home .route-sapphire,#home .route-ruby{display:inline-block;width:6px;height:8px;transform:rotate(35deg);background:linear-gradient(135deg,#e1f8ff,#55bffe 52%,#266cb6);border:1px solid #b5eaff}
-#home .route-ruby{background:linear-gradient(135deg,#ffcad7,#e65875 52%,#8c234c);border-color:#ffa6bf}
+#home .route-sapphire,#home .route-ruby{display:inline-block;width:10px;height:14px;clip-path:polygon(50% 0,85% 18%,74% 70%,50% 100%,17% 69%,8% 18%);background:linear-gradient(160deg,#dff8ff 0%,#8ddcff 30%,#4eaef0 56%,#2a5ca5 100%);border:1px solid #b5eaff;box-shadow:0 0 7px #4fb4e330}
+#home .route-ruby{background:linear-gradient(160deg,#ffd5e4 0%,#ff9fbc 30%,#e06185 56%,#8c234c 100%);border-color:#ffa6bf;box-shadow:0 0 7px #e96d9530}
 #home .route-separator{width:1px;height:12px;background:#b7965955;margin:0 3px}
 #home .build-note{font-size:7px;color:#a7b5c5;letter-spacing:1.1px;white-space:nowrap}
 /* The large face depresses into a fixed, dark-gold button base. */
@@ -194,6 +194,37 @@ canvas{-webkit-user-drag:none}
 }
 @media(prefers-reduced-motion:reduce){#play:before{animation:none}#play,#homeTop .icon-button{transition:none}#play:active,#play.is-starting{transform:translateY(2px)}}
 
+
+/* 010: polished silver replaces the annotated blue home surfaces only.
+   Gold controls, Rook, crystals, the game HUD and gameplay scenery are untouched. */
+html.home-silver,html.home-silver body{background:#dfe3e7}
+html.home-silver body:before{content:"";position:absolute;top:0;left:0;right:0;height:var(--home-safe-top);z-index:3;pointer-events:none;background:linear-gradient(180deg,#cbd3da 0%,#dfe5e9 14%,#8b969f 35%,#707b85 72%,#c6d0d8 100%)}
+html.home-silver #vignette{box-shadow:inset 0 0 55px 10px #464b511c}
+#home .home-copy{
+ border-color:#fffdf4;border-radius:18px;
+ background:
+  linear-gradient(123deg,transparent 12%,#ffffffa3 14%,#ffffff28 26%,transparent 29%,transparent 68%,#ffffff66 70%,transparent 83%),
+  linear-gradient(163deg,#fdfefe 0%,#e9edef 20%,#ccd2d7 42%,#b0b8c0 47%,#e3e7eb 51%,#fafbfc 72%,#cbd2d8 100%);
+ box-shadow:inset 0 2px 0 #fff,inset 2px 0 0 #ffffff8c,inset -2px 0 0 #68717d45,inset 0 -3px 0 #8d969f9c,0 5px 0 #8e969f,0 7px 0 #534b3940,0 14px 29px #111b2b40;
+}
+#home .home-copy:before{left:14px;right:14px;height:2px;background:linear-gradient(90deg,transparent,#fff 25%,#fff 75%,transparent)}
+#home .home-copy>.eyebrow{color:#42494f;text-shadow:0 1px 0 #ffffffa6}
+#home .home-copy h1{background-image:linear-gradient(180deg,#80500e 0%,#a26c14 24%,#9a6512 48%,#694009 53%,#b17a22 76%,#82500f 100%);filter:drop-shadow(0 1px 0 #fff) drop-shadow(0 2px 0 #67471130)}
+#home .prototype-tag{color:#484f57;text-shadow:0 1px 0 #ffffffa6}
+#home .prototype-tag span{color:#5a411b;background:linear-gradient(155deg,#fbfdff,#c4ccd3);border-color:#8c79534f;box-shadow:inset 0 1px 1px #7b879250,0 1px 0 #fff}
+#home .home-copy>#play{margin-top:23px}
+#home .control-caption{color:#4d555c;text-shadow:0 1px 0 #ffffffc0}
+#home .control-caption b{color:#30383e}
+#home .stats-strip{background:linear-gradient(164deg,#f7fafc 0%,#d3dae0 38%,#bdc6ce 48%,#e1e6ea 54%,#f0f3f5 100%);border-color:#939da77a;box-shadow:inset 0 1px 3px #52617130,inset 0 -1px 0 #fff,0 1px 0 #ffffffab}
+#home .stats-strip small{color:#424b54;text-shadow:0 1px 0 #ffffffad}
+#home .stats-strip strong{color:#69470f;text-shadow:0 1px 0 #fff;letter-spacing:.2px}
+#home .stats-strip em{color:#4b5157}
+#home .stats-strip .tiny-coin{color:#94681b}
+#home .stat-divider{background:linear-gradient(transparent,#978058aa,transparent)}
+@media(max-width:720px) and (orientation:portrait){#home .home-copy>#play{margin-top:21px}}
+@media(max-height:520px) and (orientation:landscape){#home .home-copy>#play{margin-top:18px}}
+@media(max-height:370px) and (orientation:landscape){#home .home-copy>#play{margin-top:13px}}
+
 </style>
 </head>
 <body>
@@ -205,8 +236,8 @@ canvas{-webkit-user-drag:none}
 </header>
 <main id="home" class="screen">
  <div class="home-inner">
-  <div class="hero-wrap"><div class="hero-halo"></div><canvas id="hero" width="700" height="680" aria-label="Rook, a tiny gold golem with a sapphire core and big golden hands"></canvas><span class="mascot-tag"><i></i>YOUR LITTLE GUARDIAN</span></div>
-  <div class="home-copy"><div class="eyebrow">GOLD. GEMS. ONE GOOD SWING.</div><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>009</span></div><p class="intro">Bring each gem home.<br>One brave little guardian.</p>
+  <div class="hero-wrap"><div class="hero-halo"></div><canvas id="hero" width="700" height="680" aria-label="Rook, a tiny gold golem with a sapphire core and big golden hands"></canvas></div>
+  <div class="home-copy"><div class="eyebrow">GOLD. GEMS. ONE GOOD SWING.</div><h1>Emily Game</h1><div class="prototype-tag">GRAPPLE PROTOTYPE <span>011</span></div>
    <button id="play" class="primary-button" type="button" aria-label="Start"><i class="start-jewel" aria-hidden="true"></i><span class="start-label">START</span><i class="start-jewel" aria-hidden="true"></i></button>
    <p class="control-caption"><b>Hold a ring</b> to grapple. <b>Release</b> to swing.</p>
    <div class="stats-strip"><div><small>PERSONAL BEST</small><strong id="homeBest">0 <em>m</em></strong></div><span class="stat-divider"></span><div><small>TREASURE BANK</small><strong><span class="tiny-coin" aria-hidden="true">✦</span> <span id="homeGold">0</span></strong></div></div>
@@ -228,11 +259,11 @@ canvas{-webkit-user-drag:none}
 <section id="helpPanel" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><div class="panel help-panel"><div class="eyebrow">ONE BUTTON. ALL MOMENTUM.</div><h2 id="helpTitle">Meet your next swing.</h2><div class="help-step"><span>01</span><div><h3>Choose any visible ring</h3><p>Hold on a grapple ring to choose it—even behind Rook or at the far edge of the screen. Hold empty space for the easy automatic option.</p></div></div><div class="help-step"><span>02</span><div><h3>Release to swing</h3><p>Let go to carry your momentum. Rook can swing backward too; the chain stays attached while you hold.</p></div></div><div class="help-step"><span>03</span><div><h3>Switch your anchor</h3><p>Release and hold another ring, or drag your held finger onto it. Gold and gems are treasure; red crystals and saws are hazards.</p></div></div><div class="help-step"><span>04</span><div><h3>Find your rhythm</h3><p>Release during the lower sweep for a clean swing. Three in a row earn ×2 treasure; six earn ×3. Each ring rewards you once per run.</p></div></div><div class="help-step"><span>05</span><div><h3>Crystal Rush</h3><p>Gems, coins, and clean swings charge a seven-second bonus: extra speed, double treasure, and protection. Traps fold away in the bonus stretch. No extra button.</p></div></div><div class="help-step"><span>06</span><div><h3>Crystal Flight</h3><p>Swing into the rare winged blue crystal. Fly head-first for 10 seconds: hold to rise and release to dive. A shield absorbs one hit during flight. When flight ends, hold to auto-grapple or choose a ring. The pickup activates immediately, even during Rush. Any remaining Rush time pauses and resumes after flight.</p></div></div><div class="help-step"><span>07</span><div><h3>A little room to find your swing</h3><p>The first 500 m have no obstacles. Rings and treasure are still there, so you can find your rhythm. After 500 m, watch for crimson crystal traps and gilded saws. You still need to catch rings to avoid falling.</p></div></div><div class="help-step"><span>08</span><div><h3>A little guardian, two deliveries</h3><p>Bring the sapphire in Rook’s chest to the Sapphire Shrine at 10,000 m. He then carries a ruby to the Ruby Shrine at 20,000 m. The chest gem changes automatically; fly or swing through either destination. After both deliveries, the endless run continues. A new run starts with sapphire again.</p></div></div><p class="help-controls">Phone: hold a ring; drag to switch<br>Computer: hold left mouse on a ring; Space auto-grapples<br>Pause: Esc or P</p><button id="closeHelp" class="primary-button">LET'S SWING <span>↗</span></button></div></section>
 <div id="saveNotice" class="save-notice hidden" role="status">Saving is unavailable in this browser. You can still play.</div>
 <noscript><div class="noscript">Enable JavaScript to play Emily Game.</div></noscript>
-<script>/* Rook — Grapple Prototype 009. Original dependency-free canvas prototype.
+<script>/* Rook — Grapple Prototype 011. Original dependency-free canvas prototype.
    Art functions are isolated from physics so all visuals remain replaceable. */
 (() => {
 'use strict';
-const BUILD='009', STORAGE='rook.grapple.prototype.v1';
+const BUILD='010', STORAGE='rook.grapple.prototype.v1';
 const TEST=new URLSearchParams(location.search).has('test');
 const $=id=>document.getElementById(id);
 const canvas=$('world'), ctx=canvas.getContext('2d',{alpha:false});
@@ -293,6 +324,10 @@ function show(el,on){el.classList.toggle('hidden',!on);}
 function seeded(s){return()=>{let t=s+=0x6D2B79F5;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;};}
 function hash(n){return ((Math.sin(n*127.1+311.7)*43758.5453123)%1+1)%1;}
 function fmt(n){return Math.floor(n).toLocaleString('en-US');}
+function setHomeChrome(isHome){
+ document.documentElement.classList.toggle('home-silver',isHome);
+ document.querySelector('meta[name="theme-color"]').content=isHome?'#dfe3e7':'#101121';
+}
 function refreshHome(){ $('homeBest').innerHTML=fmt(save.best)+' <em>m</em>'; $('homeGold').textContent=fmt(save.gold); }
 function refreshSound(){document.querySelectorAll('.sound-button').forEach(b=>{b.textContent=save.sound?'♪':'♪̸';b.setAttribute('aria-pressed',String(save.sound));b.setAttribute('aria-label',save.sound?'Turn sound off':'Turn sound on');});}
 function initAudio(){
@@ -333,7 +368,7 @@ function playerScreenX(){return Math.min(330,viewW*.265);}
 /* buildUntil is implemented in the 006 gameplay section below. */
 
 function startRun(testSeed){
- cancelStartPress();
+ cancelStartPress();setHomeChrome(false);
  seed=(testSeed===undefined?(Math.random()*4294967295)>>>0:testSeed>>>0);rng=seeded(seed);
  anchors=[];obstacles=[];pickups=[];particles=[];labels=[];
  nextAnchorX=330;anchorId=0;segmentIndex=0;generationX=0;
@@ -537,7 +572,7 @@ function completeFinish(reason,quit=false){
  show($('newBest'),bestThisRun);show($('overPanel'),true);updateHUD();
 }
 function toHome(){
- cancelStartPress();homeSceneCache=null;
+ cancelStartPress();setHomeChrome(true);homeSceneCache=null;
  delivered=0;deliveryGlow=0;deliveryFx=null;
  if(mode==='playing'||mode==='ready'||mode==='paused')bank();
  mode='home';held=false;keyHolding=false;pointer=null;hoverPoint=null;dragOrigin=null;particles=[];labels=[];trail=[];rushTime=0;rushBlend=0;flightTime=0;flightShield=0;suspendedRush=null;death=null;accumulator=0;
@@ -782,13 +817,35 @@ function collect(c){
  sfx(c.type==='coin'?'coin':'gem');
  if(c.type!=='coin')floating(c.x,c.y-24,'+'+value+' GOLD',gemColors(c.type).light);
 }
-// Insets follow the four drawn crystal blades, instead of an invisible solid
-// rectangle across the gaps. Hit regions stay forgiving inside the artwork.
-function crystalBlade(o,j){
- const top=o.type==='ceiling',factor=[.68,1,.84,.62][j];
- const base=top?o.y+10:o.y+o.h-5;
- const height=(o.h-8)*factor,center=o.x+o.w*(.145+j*.235),width=o.w*.275;
- return{base,height,center,width,sign:top?1:-1};
+// 010: irregular crystal clusters. Shape is fixed for the life of an obstacle;
+// no Math.random, animation time, or main course RNG is used here. A WeakMap
+// keeps cached paths/collision polygons bounded by the live obstacle objects.
+const crystalGeometryCache=new WeakMap();
+function crystalBlades(o){
+ let blades=crystalGeometryCache.get(o);if(blades)return blades;
+ const salt=(seed^Math.imul(Math.round(o.x*16),0x45d9f3b)^Math.imul((o.id||0)+1,0x27d4eb2d)^(o.type==='ceiling'?0x72abc031:0x3147b921))>>>0;
+ const random=seeded(salt),count=3+Math.floor(random()*3);
+ const weights=Array.from({length:count},()=>.72+random()*.60);
+ const total=weights.reduce((a,b)=>a+b,0),span=o.w*.94;
+ const tallest=Math.floor(random()*count),shortest=(tallest+1+Math.floor(random()*(count-1)))%count;
+ const top=o.type==='ceiling',base=top?o.y+10:o.y+o.h-5,sign=top?1:-1;
+ blades=[];let cursor=o.x+o.w*.03;
+ for(let j=0;j<count;j++){
+  const cell=span*weights[j]/total,center=cursor+cell*(.46+random()*.08);cursor+=cell;
+  const width=Math.min(cell*(.94+random()*.23),2*(center-o.x-1),2*(o.x+o.w-1-center));
+  const factor=j===tallest?.94+random()*.06:j===shortest?.35+random()*.15:.51+random()*.37;
+  const height=(o.h-8)*factor,tipOffset=(random()-.5)*width*.57;
+  const leftHeight=height*(.42+random()*.25),rightHeight=height*(.42+random()*.25);
+  const leftFoot=-width*(.32+random()*.10),rightFoot=width*(.32+random()*.10);
+  const points=[[tipOffset,sign*height],[-width*.5,sign*leftHeight],[leftFoot,0],[rightFoot,0],[width*.5,sign*rightHeight]];
+  // Homothetic inset stays strictly inside this exact silhouette. Retain the
+  // old 4-world-unit player-radius grace and leave sockets non-colliding.
+  const cx=points.reduce((n,q)=>n+q[0],0)/points.length,cy=points.reduce((n,q)=>n+q[1],0)/points.length;
+  const hit=points.map(q=>[center+lerp(cx,q[0],.86),base+lerp(cy,q[1],.86)]);
+  const path=new Path2D();path.moveTo(...points[0]);for(let i=1;i<points.length;i++)path.lineTo(...points[i]);path.closePath();
+  blades.push({base,height,center,width,sign,tipOffset,leftHeight,rightHeight,leftFoot,rightFoot,points,hit,path});
+ }
+ crystalGeometryCache.set(o,blades);return blades;
 }
 function circlePolygon(x,y,r,points){
  let inside=false;
@@ -809,10 +866,8 @@ function obstacleEnabled(o){return !openingClear()&&obstacleLeft(o)>=OBSTACLE_ST
 function obstacleHit(o,x,y,r){
  if(!obstacleEnabled(o)||o.rushSafe)return false;
  if(o.type==='saw')return hypot(x-o.x,y-sawY(o))<r+o.r-5;
- for(let j=0;j<4;j++){
-  const b=crystalBlade(o,j),h=b.height-12,w=b.width*.32;
-  const pts=[[b.center-w,b.base],[b.center-w,b.base+b.sign*h*.56],[b.center,b.base+b.sign*h],[b.center+w,b.base+b.sign*h*.56],[b.center+w,b.base]];
-  if(circlePolygon(x,y,Math.max(1,r-4),pts))return true;
+ for(const b of crystalBlades(o)){
+  if(circlePolygon(x,y,Math.max(1,r-4),b.hit))return true;
  }
  return false;
 }
@@ -945,6 +1000,14 @@ function gem(g,x,y,r,type='sapphire',rot=0){
  poly(g,[[-r*.35,-r*.11],[r*.3,-r*.17],[0,r]],c.mid);
  g.strokeStyle='#ffffff99';g.lineWidth=1.1;g.beginPath();g.moveTo(-r*.5,-r*.53);g.lineTo(r*.34,-r*.64);g.stroke();g.restore();
 }
+function metalBall(g,x,y,r=8){
+ const q=g.createRadialGradient(x-r*.35,y-r*.4,r*.8,x,y,r*1.55);
+ q.addColorStop(0,'#ffffff');q.addColorStop(.2,'#e7edf4');q.addColorStop(.48,'#b7c0ca');q.addColorStop(.78,'#7c8794');q.addColorStop(1,'#555f6c');
+ g.fillStyle=q;g.beginPath();g.arc(x,y,r,0,TAU);g.fill();
+ g.strokeStyle='#404853';g.lineWidth=Math.max(1,r*.18);g.stroke();
+ g.beginPath();g.arc(x-r*.22,y-r*.3,r*.22,0,TAU);g.fillStyle='#ffffffb8';g.fill();
+}
+
 function crystal(g,x,y,w,h,type='amethyst',rot=0){
  const c=gemColors(type);g.save();g.translate(x,y);g.rotate(rot);
  poly(g,[[0,-h],[-w*.48,-h*.63],[-w*.39,0],[w*.4,0],[w*.51,-h*.62]],c.mid,c.dark,1.2);
@@ -1009,7 +1072,10 @@ function drawRook(g,x,y,size,pose='idle',rotation=0,t=0,reach=null,grounded=fals
  }
  g.save();g.translate(0,-25);g.rotate(lively?Math.sin(t*4.8)*.038:0);g.translate(0,25);
  rr(g,-37,-54,74,58,19);g.fillStyle=goldGrad(g,-38,-58,76,62);g.fill();g.strokeStyle=outline;g.lineWidth=3;g.stroke();
- rr(g,-29,-42,58,34,12);g.fillStyle='#fff0c9';g.fill();g.strokeStyle='#c89541';g.lineWidth=1.5;g.stroke();
+ // Silver face plate replaces the earlier peach insert.
+ rr(g,-29,-42,58,34,12);
+ const faceSilver=g.createLinearGradient(-29,-42,29,-8);faceSilver.addColorStop(0,'#f7fbff');faceSilver.addColorStop(.18,'#e1e9f1');faceSilver.addColorStop(.45,'#bcc7d2');faceSilver.addColorStop(.72,'#8e9ba8');faceSilver.addColorStop(1,'#dfe7ef');
+ g.fillStyle=faceSilver;g.fill();g.strokeStyle='#9aa6b2';g.lineWidth=1.5;g.stroke();
  // Two dark readable eyes; one highlight each, without tiny overlapping irises.
  const blink=!sad&&!dead&&t%5.2>5.04;
  for(const side of [-1,1]){
@@ -1024,6 +1090,12 @@ function drawRook(g,x,y,size,pose='idle',rotation=0,t=0,reach=null,grounded=fals
  g.strokeStyle='#94693d';g.lineWidth=1.8;g.beginPath();
  if(sad||dead){g.arc(0,-14,3.5,0,TAU);}else{g.moveTo(-3,-15);g.quadraticCurveTo(0,-12,4,-15);}g.stroke();
  g.strokeStyle='#fff5ca';g.lineWidth=2.6;g.beginPath();g.moveTo(-26,-49);g.quadraticCurveTo(-9,-53,8,-50);g.stroke();
+ // Decorative tail tether now ends in a small silver ball, in the hero view and in gameplay.
+ const tailWiggle=reducedMotion?0:Math.sin(t*2.6+(running?1.1:0))*3.1;
+ const tailLift=soar?-9:flight?-4:swing?-2:0;
+ g.strokeStyle='#5f462e';g.lineWidth=6;g.beginPath();g.moveTo(28,6);g.bezierCurveTo(47,12,52-tailWiggle,29+tailLift,39+tailWiggle,39+tailLift);g.stroke();
+ g.strokeStyle='#d9ba68';g.lineWidth=3.7;g.stroke();g.strokeStyle='#fff2c7aa';g.lineWidth=1.1;g.stroke();
+ metalBall(g,39+tailWiggle,39+tailLift,6.3);
  g.restore();
  if(!reducedMotion)star(g,4,15,3.5,Math.max(0,Math.sin(t*1.4+2))*.6,'#fff');
  g.restore();
@@ -1189,16 +1261,16 @@ function buildHomeSceneCache(){
   const q=g.createLinearGradient(x,y,x+w,y+h*.15);
   q.addColorStop(0,'#3c3540');q.addColorStop(.22,'#796447');q.addColorStop(.42,'#c0a166');q.addColorStop(.50,'#927544');q.addColorStop(.67,'#564839');q.addColorStop(1,'#282e3b');return q;
  };
- const bg=g.createLinearGradient(0,0,0,vh);bg.addColorStop(0,'#0d1527');bg.addColorStop(.43,'#202d44');bg.addColorStop(1,'#101c2e');g.fillStyle=bg;g.fillRect(0,0,vw,vh);
- const ambient=g.createRadialGradient(hx,hy,8,hx,hy,Math.max(box.width*.8,190));ambient.addColorStop(0,'#64799739');ambient.addColorStop(.48,'#41638d17');ambient.addColorStop(1,'#23466b00');g.fillStyle=ambient;g.fillRect(0,0,vw,vh);
+ const bg=g.createLinearGradient(0,0,0,vh);bg.addColorStop(0,'#e8edf0');bg.addColorStop(.16,'#bdc6cf');bg.addColorStop(.43,'#ecf0f3');bg.addColorStop(.72,'#b8c1ca');bg.addColorStop(1,'#e7ebef');g.fillStyle=bg;g.fillRect(0,0,vw,vh);
+ const ambient=g.createRadialGradient(hx,hy,8,hx,hy,Math.max(box.width*.8,190));ambient.addColorStop(0,'#ffffff88');ambient.addColorStop(.48,'#f7fcff33');ambient.addColorStop(1,'#ffffff00');g.fillStyle=ambient;g.fillRect(0,0,vw,vh);
  // Quiet fitted stone blocks, rather than a flat gradient or a scrolling rail.
  const course=70*unit;
  for(let row=0,y=52*unit;y<floor;y+=course,row++){
   const width=138*unit;
   for(let x=-(row%2)*width*.5;x<vw;x+=width){
-   rr(g,x+2,y+2,width-4,course-4,3);g.fillStyle=row%2?'#8595b505':'#0a162223';g.fill();
-   g.strokeStyle='#0b172c88';g.lineWidth=1.5;g.stroke();
-   g.strokeStyle='#a5a9b80c';g.beginPath();g.moveTo(x+5,y+4);g.lineTo(x+width-4,y+4);g.stroke();
+   rr(g,x+2,y+2,width-4,course-4,3);g.fillStyle=row%2?'#ffffff15':'#6f7c8710';g.fill();
+   g.strokeStyle='#75838e38';g.lineWidth=1.5;g.stroke();
+   g.strokeStyle='#ffffff9c';g.beginPath();g.moveTo(x+5,y+4);g.lineTo(x+width-4,y+4);g.stroke();
   }
  }
  // The outer arch encloses the launch hall. Its linework matches the run.
@@ -1227,10 +1299,10 @@ function buildHomeSceneCache(){
  ellipse(g,hx,cy+rad*.24,rad*.25,rad*.25,'#9c7a4366');ellipse(g,hx,cy+rad*.24,rad*.20,rad*.20,'#102135');
  g.save();g.globalAlpha=.65;gem(g,hx,cy+rad*.24,rad*.14,'sapphire');g.restore();
  // Wide floor slabs and inlaid gold seams lead into the room.
- const floorGrad=g.createLinearGradient(0,floor,0,vh);floorGrad.addColorStop(0,'#29374b');floorGrad.addColorStop(1,'#101a2b');g.fillStyle=floorGrad;g.fillRect(0,floor,vw,vh-floor);
+ const floorGrad=g.createLinearGradient(0,floor,0,vh);floorGrad.addColorStop(0,'#b9c3cc');floorGrad.addColorStop(.21,'#eff4f7');floorGrad.addColorStop(.46,'#c6cfd7');floorGrad.addColorStop(.78,'#e8edf1');floorGrad.addColorStop(1,'#d0d7de');g.fillStyle=floorGrad;g.fillRect(0,floor,vw,vh-floor);
  g.fillStyle='#8e754d';g.fillRect(0,floor-3*unit,vw,4*unit);g.fillStyle='#d9b97570';g.fillRect(0,floor-3*unit,vw,1);
- for(let i=-4;i<=6;i++){g.beginPath();g.moveTo(vw*.5+i*vw*.12,floor);g.lineTo(vw*.5+i*vw*.25,vh);g.strokeStyle='#aa91532e';g.lineWidth=1;g.stroke();}
- for(const y of [.35,.78]){g.fillStyle='#a0b7d518';g.fillRect(0,floor+(vh-floor)*y,vw,1);}
+ for(let i=-4;i<=6;i++){g.beginPath();g.moveTo(vw*.5+i*vw*.12,floor);g.lineTo(vw*.5+i*vw*.25,vh);g.strokeStyle='#88734852';g.lineWidth=1;g.stroke();}
+ for(const y of [.35,.78]){g.fillStyle='#ffffff85';g.fillRect(0,floor+(vh-floor)*y,vw,1);}
  // Fluted gold/stone pillars carry the same sapphire lanterns as gameplay.
  const pillarXs=[vw*.035,vw*.965];
  if(!portrait&&copy.left-box.right>24)pillarXs.push((copy.left+box.right)*.5);
@@ -1257,8 +1329,8 @@ function buildHomeSceneCache(){
   for(let j=0;j<8;j++){const px=side*(36+j*5),py=9-Math.sin(j*.7)*6;ellipse(g,px,py,8,2.8,j%3?'#b79450':'#e6c77c');}
   g.restore();
  }
- // Dim the outer corners, leaving Rook and the readable plaques in focus.
- const shade=g.createLinearGradient(0,0,0,vh);shade.addColorStop(0,'#050c1c55');shade.addColorStop(.18,'#07101c00');shade.addColorStop(.80,'#050c1c00');shade.addColorStop(1,'#050c1c55');g.fillStyle=shade;g.fillRect(0,0,vw,vh);
+ // Broad, quiet silver reflections reach the top and bottom safe areas.
+ const shade=g.createLinearGradient(0,0,0,vh);shade.addColorStop(0,'#ffffff42');shade.addColorStop(.18,'#ffffff00');shade.addColorStop(.80,'#ffffff00');shade.addColorStop(1,'#ffffff40');g.fillStyle=shade;g.fillRect(0,0,vw,vh);
  return{canvas:c,vw,vh,quality,lights,hx,hy};
 }
 function drawHomeBackdrop(t){
@@ -1333,16 +1405,21 @@ function dangerEmblem(g,x,y,size,safe=false){
  poly(g,[[x,y-size],[x+size*.92,y+size*.7],[x-size*.92,y+size*.7]],'#362135','#ee8196',1.4);
  g.strokeStyle='#ffe3d7';g.lineWidth=1.4;g.beginPath();g.moveTo(x,y-size*.37);g.lineTo(x,y+size*.08);g.stroke();ellipse(g,x,y+size*.4,.9,.9,'#ffe3d7');
 }
-function trapCrystal(g,x,base,width,height,down=false,t=0){
- const sign=down?1:-1;
- const metal=g.createLinearGradient(x-width*.5,base,x+width*.5,base);metal.addColorStop(0,'#ffccda');metal.addColorStop(.23,'#d35078');metal.addColorStop(.5,'#ad335f');metal.addColorStop(.65,'#f182a0');metal.addColorStop(1,'#6f274e');
- const tip=base+sign*height,shoulder=base+sign*height*.62;
- poly(g,[[x,tip],[x-width*.5,shoulder],[x-width*.4,base],[x+width*.4,base],[x+width*.5,shoulder]],metal,'#4c233f',2);
- poly(g,[[x,tip],[x-width*.5,shoulder],[x-width*.4,base],[x-width*.09,base],[x-width*.11,shoulder]],'#ee91b49c');
- poly(g,[[x,tip],[x+width*.5,shoulder],[x+width*.4,base],[x+width*.10,base],[x+width*.10,shoulder]],'#5c234769');
- g.strokeStyle='#ffe1ecb5';g.lineWidth=1.4;g.beginPath();g.moveTo(x,tip+sign*-3);g.lineTo(x-width*.39,shoulder);g.stroke();
- // One bright tip and a bevel are enough; no broad bloom over the path.
- if(!reducedMotion)star(g,x,tip,2.5,.25+Math.max(0,Math.sin(t*1.8+x))*.35,'#ffd6e7');
+function trapCrystal(g,b,t=0){
+ g.save();g.translate(b.center-camera,b.base);
+ const {width,height,sign,tipOffset,leftHeight,rightHeight,leftFoot,rightFoot}=b;
+ const metal=g.createLinearGradient(-width*.5,0,width*.5,0);
+ metal.addColorStop(0,'#ffccda');metal.addColorStop(.23,'#d35078');metal.addColorStop(.5,'#ad335f');metal.addColorStop(.65,'#f182a0');metal.addColorStop(1,'#6f274e');
+ g.fillStyle=metal;g.fill(b.path);g.strokeStyle='#4c233f';g.lineWidth=2;g.stroke(b.path);
+ const tip=[tipOffset,sign*height],left=[-width*.5,sign*leftHeight],right=[width*.5,sign*rightHeight];
+ // Different shoulders, tilted points and long facets, all inside the outline.
+ g.save();g.clip(b.path);
+ poly(g,[tip,left,[leftFoot,0],[-width*.08,0],[tipOffset*.3-width*.08,sign*leftHeight]],'#ee91b49c');
+ poly(g,[tip,right,[rightFoot,0],[width*.1,0],[tipOffset*.3+width*.1,sign*rightHeight]],'#5c234769');
+ g.restore();
+ g.strokeStyle='#ffe1ecb5';g.lineWidth=1.4;g.beginPath();g.moveTo(tipOffset,sign*(height-3));g.lineTo(-width*.44,sign*leftHeight);g.stroke();
+ if(!reducedMotion)star(g,tipOffset,sign*height,2.5,.25+Math.max(0,Math.sin(t*1.8+b.center))*.35,'#ffd6e7');
+ g.restore();
 }
 function drawObstacle(o,t){
  const x=o.x-camera,safe=!!o.rushSafe,pulse=reducedMotion?.65:.65+Math.sin(t*3.5+o.phase)*.15;
@@ -1352,12 +1429,11 @@ function drawObstacle(o,t){
   rr(ctx,x-4,base,o.w+8,24,5);ctx.fillStyle='#151a2b';ctx.fill();ctx.strokeStyle=safe?'#65aeb577':'#9f7840';ctx.lineWidth=2;ctx.stroke();
   const bevel=ctx.createLinearGradient(x,base,x,base+24);bevel.addColorStop(0,'#edd08a');bevel.addColorStop(.25,'#8f6531');bevel.addColorStop(.6,'#594135');bevel.addColorStop(1,'#b08a4b');
   ctx.fillStyle=bevel;ctx.fillRect(x-2,base+2,o.w+4,4);ctx.fillRect(x-2,base+19,o.w+4,3);
-  for(let j=0;j<4;j++){
-   const b=crystalBlade(o,j);
+  for(const b of crystalBlades(o)){
    if(safe){
     // Retracted crystals read as safe hardware, never an active red trap.
     rr(ctx,b.center-camera-b.width*.34,base+7,b.width*.68,9,2);ctx.fillStyle='#377283';ctx.fill();ctx.strokeStyle='#91dae64f';ctx.lineWidth=1;ctx.stroke();
-   }else trapCrystal(ctx,b.center-camera,b.base,b.width,b.height,top,t);
+   }else trapCrystal(ctx,b,t);
   }
   for(const bx of [x+6,x+o.w-6]){ellipse(ctx,bx,base+12,2.7,2.7,'#1a2132');ellipse(ctx,bx-.6,base+11.2,1.3,1.3,'#eed293');}
   ctx.save();ctx.globalAlpha=pulse;ctx.strokeStyle=safe?'#91e0ea':'#ff7d96';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x+15,base+12);ctx.lineTo(x+35,base+12);ctx.moveTo(x+o.w-35,base+12);ctx.lineTo(x+o.w-15,base+12);ctx.stroke();ctx.restore();
@@ -1530,7 +1606,7 @@ function drawHero(t){
  drawRook(g,0,-12,1.88,'idle',-.025,t);
  // Palm chain in the display pose hints at the game's actual tool.
  g.strokeStyle='#5f462e';g.lineWidth=7;g.beginPath();g.moveTo(87,54);g.bezierCurveTo(144,73,152,-21,115,-28);g.stroke();g.strokeStyle='#e2bb60';g.lineWidth=4;g.stroke();g.strokeStyle='#ffe9a666';g.lineWidth=1;g.stroke();
- g.strokeStyle='#8f632d';g.lineWidth=4;g.setLineDash([2,9]);g.stroke();g.setLineDash([]);gem(g,111,-33,15,'sapphire',.5);
+ g.strokeStyle='#8f632d';g.lineWidth=4;g.setLineDash([2,9]);g.stroke();g.setLineDash([]);metalBall(g,111,-33,10.5);
  if(!reducedMotion){star(g,-107,-54,6,Math.max(0,Math.sin(t*1.3))*.7);star(g,125,-122,5,Math.max(0,Math.sin(t*1.7+1))*.8,'#c4e9ff');}
  g.restore();
 }
@@ -1652,6 +1728,8 @@ if(TEST){
   renderAt:t=>render(t),
   collectIndex:i=>{if(pickups[i])collect(pickups[i]);},
   obstacleHit,obstacleLeft,openingClear,obstacleEnabled,deathBottom,
+  crystalGeometry:o=>crystalBlades(o).map(({path,...b})=>b),
+  crystalCacheStable:o=>crystalBlades(o)===crystalBlades(o),
   drawRook,drawHero,currentRookPose,
   deathPadding:DEATH_PADDING,
   startButton:()=>({pending:startPending,disabled:$('play').disabled,pressed:$('play').classList.contains('is-starting')}),
